@@ -1,0 +1,10 @@
+{
+    "en": {
+        "Shanghai China|UTC+08:00": "Asia/Shanghai",
+        "Queensland Australia|UTC+10:00": "Australia/Queensland"
+    },
+    "zh": {
+        "中国 上海|UTC+08:00": "Asia/Shanghai",
+        "澳大利亚 昆士兰|UTC+10:00": "Australia/Queensland"
+    }
+}

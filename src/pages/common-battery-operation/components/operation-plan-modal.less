@@ -1,0 +1,111 @@
+@import (reference) '../../../static/themes/default.less';
+
+.operation-plan-modal {
+  .operation-plan-body {
+    padding: 16px;
+    background-color: @wanke-card-bg-color;
+    & > footer {
+    }
+  }
+  .operation-plan-title-value {
+    color: @primaryColor;
+    margin: 0 4px;
+  }
+  .operation-plan-body-header {
+    margin-bottom: 24px;
+  }
+  .operation-plan-body-desc {
+    margin-bottom: 30px;
+  }
+
+  .summary-list {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  .summary-card {
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    background-color: @wanke-card-light-color;
+    border-radius: 4px;
+    padding: 16px;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+    .summary-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: blue;
+      background-image: linear-gradient(
+        to right,
+        rgba(146, 61, 255, 1),
+        rgba(61, 126, 255, 1)
+      );
+      margin: 0 24px 0 8px;
+      position: relative;
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fbfcff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .summary-body {
+      flex-grow: 1;
+    }
+    .summary-content {
+      color: @wanke-light-font-color;
+      font-size: 16px;
+    }
+    .summary-value {
+      color: @primaryColor;
+    }
+  }
+
+  .ant-modal-body {
+    max-height: 80vh;
+    overflow: auto;
+  }
+  .ant-modal-close {
+    display: none;
+  }
+  .menu-list {
+    position: absolute;
+    top: 11px;
+    right: 24px;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .operation-plan-modal {
+    .operation-plan-body {
+      background-color: rgb(41, 45, 58);
+    }
+    .summary-card {
+      background-color: @wanke-card-light-color;
+      .summary-icon {
+        &::after {
+          background-color: rgb(45, 49, 62);
+        }
+      }
+      .summary-content {
+        color: @wanke-light-font-color;
+      }
+      .summary-value {
+        color: @primaryColor;
+      }
+    }
+  }
+  .operation-plan-title-value {
+    color: @primaryColor;
+  }
+}

@@ -1,0 +1,24 @@
+# 模块依赖
+node_modules
+
+# 编译后的代码
+dist
+# umi开发产生的临时文件
+.env
+src/models/*
+.umi
+.umi-production
+.umirc-production
+.umirc.local.js
+.umi-production
+src/pages/document.ejs
+src/static/img/login.png
+src/static/img/login-background.png
+.history
+
+.idea
+yarn-error.log
+package-lock.json
+mock/myMenu.js
+test/url
+.vscode

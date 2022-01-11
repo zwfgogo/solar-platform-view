@@ -1,0 +1,34 @@
+@import (reference) '../../../static/themes/default.less';
+
+.page-start-up(
+  @cardBorderColor
+) {
+  .device-signal-list-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .signal-list-filter {
+      flex-shrink: 0;
+      border-bottom: 1px solid @cardBorderColor;
+      padding: 9px 16px;
+    }
+    .signal-list-body {
+      flex-grow: 1;
+      padding: 16px;
+      overflow: auto;
+      position: relative;
+    }
+  }
+}
+
+.page-start-up(
+  @cardBorderColor
+);
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .page-start-up(
+    @cardBorderColor
+  );
+}

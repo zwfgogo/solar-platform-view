@@ -1,0 +1,28 @@
+.strategy-header {
+    position: relative;
+    padding: 0 0 14px 0;
+    font-size: 16px;
+    color: rgba(5, 10, 25, 0.85);
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 7px;
+        width: 2px;
+        height: 12px;
+        background: #3d7eff;
+    }
+
+    .btns {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+:global(.dark-theme) {
+
+    .strategy-header {
+        color: rgba(255, 255, 255);
+    }
+}

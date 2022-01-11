@@ -1,0 +1,82 @@
+.wanke_selection {
+  width: 100%;
+
+  &.f-wa {
+      width: auto;
+  }
+}
+
+.select-needed {
+    &>.ant-select-selector {
+        border: 1px solid #ff4d4f !important;
+    }
+}
+
+.ant-select-dropdown {
+    .rc-virtual-list-scrollbar {
+        width: 4px !important;
+    }
+
+    .rc-virtual-list-scrollbar-thumb {
+        width: 4px !important;
+    }
+}
+
+// select
+.ant-select {
+    .ant-select-selector .ant-select-selection-search {
+        left: 8px!important;
+    }
+}
+
+// .ant-select-item-option{
+//   height: 36px;
+//   line-height: 1.7;
+// }
+
+.wanke_selection {
+  .select-tag {
+    margin-right: 2px;
+  }
+
+  .ant-select-selector {
+    padding: 0px 4px !important;
+  }
+}
+
+.wanke-dropdown {
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background: rgba(61, 126, 255, 0.05);
+  }
+
+  // .ant-select-item-option {
+  //   margin: 2px 4px;
+  // }
+}
+
+.light-theme {
+  .wanke_selection {
+    .ant-select-arrow{
+      color: rgba(5,10,25,0.45);
+    }
+  }
+  .ant-select{
+    .ant-select-arrow{
+      color: rgba(5,10,25,0.45);
+    }
+  }
+}
+
+.dark-theme {
+  .wanke_selection {
+    .ant-select-arrow{
+      color: rgba(255,255,255,0.65);
+    }
+  }
+
+  .ant-select{
+    .ant-select-arrow{
+      color: rgba(255,255,255,0.65);
+    }
+  }
+}

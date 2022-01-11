@@ -1,0 +1,66 @@
+.energy-detail {
+  width              : 100%;
+  // height          : auto;
+  min-height         : 100%;
+  background-color   : #ffffff;
+  border-radius      : 5px;
+  position           : relative;
+  padding-bottom     : 10px;
+
+  .return {
+    position        : absolute;
+    left            : 10px;
+    bottom          : 10px;
+    width           : 50px;
+    height          : 50px;
+    background-color: #3d7eff;
+    box-shadow      : 0px 3px 4px 0px rgba(0, 0, 0, 0.35);
+    border-radius   : 35px;
+    z-index         : 999;
+  }
+
+  .content {
+    height  : 100%;
+    position: relative;
+
+    .fix {
+      position: absolute;
+      right   : 0;
+      top     : 0
+    }
+
+    .basic {
+      display       : flex;
+      flex-direction: column;
+      margin-bottom : 20px;
+      padding-left  : 10px;
+
+      .table {
+        height: 400px
+      }
+
+      .row {
+        display       : flex;
+        flex-direction: row;
+        padding-left  : 20px;
+
+        .border {
+          width       : 30%;
+          margin-right: 100px;
+          border-right: 1px solid #e6e6e6
+        }
+      }
+
+
+    }
+  }
+
+  .fix-btn {
+    position: absolute;
+    left    : 100px
+  }
+
+  :global(.ant-tabs-tab) {
+    width: 150px;
+  }
+}

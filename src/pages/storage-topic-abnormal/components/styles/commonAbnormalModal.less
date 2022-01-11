@@ -1,0 +1,34 @@
+@contentHeight: 400px;
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: @contentHeight;
+  .menu {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .export-btn {
+    display: inline-block;
+  }
+  .table-container {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  .page-footer {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    min-height: 70px;
+  }
+  :global {
+    .Table {
+      // overflow: hidden !important;
+    }
+  }
+}

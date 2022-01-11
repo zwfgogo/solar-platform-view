@@ -1,0 +1,124 @@
+.optimize-running-list-page {
+
+}
+
+.page.update-strategy-page {
+    background: #efefef;
+
+    .with-circle-bg {
+        background: #fff;
+    }
+
+    .units {
+        display: flex;
+        margin-bottom: 10px;
+
+        .unit {
+            display: flex;
+            padding: 10px;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            cursor: pointer;
+            color: #999;
+
+            &.current {
+                background: #eee;
+                color: #3d7eff;
+            }
+        }
+    }
+
+    .ant-descriptions-item-label {
+        width: 140px;
+    }
+
+    .ant-descriptions-bordered .ant-descriptions-item-content {
+        padding-left: 45px;
+    }
+
+    .month-item {
+        .ant-descriptions-item-label, .ant-descriptions-item-content {
+            color: #3d7eff;
+        }
+    }
+
+    .send-strategy {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        z-index: 9;
+    }
+
+    .detail-item {
+        min-height: auto;
+    }
+
+    .rate-detail-item {
+        .item-label {
+            width: 200px;
+        }
+    }
+
+    .backup-setting {
+        .input-suffix {
+            width: 40px;
+        }
+    }
+}
+
+.check-station-dialog {
+
+    .line {
+        border-bottom: 1px solid #3d7eff;
+    }
+
+    .step-tip {
+        position: absolute;
+        top: 40px;
+        left: -40px;
+        word-break: keep-all;
+    }
+
+    .icon-wrap {
+        border: 1px solid #3d7eff;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.qrcode-send-dialog {
+
+    .info {
+        color: green;
+    }
+
+    .close {
+        position: absolute;
+        bottom: -50px;
+        left: 130px;
+        cursor: pointer;
+    }
+}
+
+.dark-theme {
+    .page.update-strategy-page {
+        background: #000;
+
+        .with-circle-bg {
+            background: #141414;
+        }
+
+        .units {
+            .unit {
+                &.current {
+                    background: #2d2d2d;
+                }
+            }
+        }
+    }
+}

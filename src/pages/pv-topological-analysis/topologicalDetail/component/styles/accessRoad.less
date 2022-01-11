@@ -1,0 +1,36 @@
+.div-block {
+    width: 10%;
+    height: 80px;
+    float: left;
+    flex-direction: column;
+
+    div {
+        border-bottom: 1px solid #f6f6f6;
+        border-right: 1px solid #f6f6f6;
+    }
+}
+
+.opertion {
+    color: #0062ff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+
+.list {
+    border: solid 1px #f6f6f6;
+}
+
+:global(.dark-theme) {
+    .div-block {
+        div {
+            border-bottom: 1px solid #2d2d2d;
+            border-right: 1px solid #2d2d2d;
+        }
+    }
+
+    .list {
+        border: solid 1px #2d2d2d;
+    }
+}

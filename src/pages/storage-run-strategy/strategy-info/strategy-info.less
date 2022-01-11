@@ -1,0 +1,146 @@
+@import (reference) '../../../static/themes/default.less';
+
+.run-strategy-info-page {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  .ant-tabs-tab {
+    color: @wanke-label-color;
+  }
+  > * {
+    flex-shrink: 0;
+  }
+  .strategy-common-header:not(.no-border) {
+    border-bottom: 1px solid @borderColor;
+    margin: 0 -16px;
+    padding: 0 16px 13px;
+    box-sizing: content-box;
+  }
+  .strategy-search {
+    display: flex;
+    margin: 16px 0 10px;
+    flex-shrink: 0;
+  }
+  .common-header-label {
+    font-weight: normal;
+  }
+  .chart-container {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .strategy-data {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+    .strategy-data-item:not(:last-child) {
+      margin-right: 16px;
+    }
+    .strategy-data-value {
+      color: @primaryColor;
+    }
+  }
+
+  &.multiply-tab {
+    padding: 0;
+    > section {
+      position: relative;
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      padding: 0 16px 16px;
+    }
+    .strategy-search {
+      margin-top: 0;
+    }
+  }
+}
+
+.control-params-detail {
+  border: 1px solid @cardBorderColor;
+  border-radius: @wanke-border-radius;
+  > section {
+    padding: 0 16px 16px;
+    overflow: auto;
+  }
+}
+
+.control-params-detail-line {
+  display: flex;
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+}
+
+.control-params-text-item {
+  width: 300px;
+  .control-params-text-item-label {
+    margin-right: 8px;
+    color: @wanke-label-color;
+  }
+}
+
+.plan-control-params {
+  width: 100%;
+  position: relative;
+  .ant-radio {
+    margin-right: 8px;
+  }
+}
+
+.c09-control-params-detail {
+  > section {
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex-shrink: 1;
+  }
+  .control-params-text-item {
+    margin-bottom: 16px;
+  }
+}
+
+.c19-form-line {
+  display: flex;
+  position: relative;
+  .c19-form-line-item {
+    margin-right: 16px;
+    width: 300px;
+  }
+  .c19-form-line-icon {
+    position: relative;
+    top: 9px;
+  }
+}
+
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .run-strategy-info-page {
+    .ant-tabs-tab {
+      color: @wanke-label-color;
+    }
+    .strategy-common-header:not(.no-border) {
+      border-bottom: 1px solid @borderColor;
+    }
+  }
+  .strategy-data {
+    .strategy-data-item:not(:last-of-type)::after {
+    }
+  }
+
+  .control-params-detail {
+    border: 1px solid @cardBorderColor;
+  }
+
+  .control-params-text-item {
+    .control-params-text-item-label {
+      color: @wanke-label-color;
+    }
+  }
+}

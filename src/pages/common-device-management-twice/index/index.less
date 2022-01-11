@@ -1,0 +1,58 @@
+@import (reference) '../../../static/themes/default.less';
+
+.page-start-up(
+  @wanke-card-bg-color,
+  @wanke-border-radius,
+  @cardBorderColor
+) {
+  .device-management-twice-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    .device-management-tree-container {
+      background-color: @wanke-card-bg-color;
+      border-radius: @wanke-border-radius;
+      padding: 16px;
+    }
+    .device-management-body {
+      flex-grow: 1;
+      flex-shrink: 1;
+      position: relative;
+      background-color: @wanke-card-bg-color;
+      border-radius: @wanke-border-radius;
+      margin-left: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .device-management-content {
+      padding: 16px;
+      overflow: auto;
+    }
+    .device-management-card {
+      border-radius: @wanke-border-radius;
+      border: 1px solid @cardBorderColor;
+      padding-top: 12px;
+    }
+    .device-management-card-body {
+      padding: 16px;
+    }
+  }
+}
+
+.page-start-up(
+  @wanke-card-bg-color,
+  @wanke-border-radius,
+  @cardBorderColor
+);
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .page-start-up(
+    @wanke-card-bg-color,
+    @wanke-border-radius,
+    @cardBorderColor
+  );
+}

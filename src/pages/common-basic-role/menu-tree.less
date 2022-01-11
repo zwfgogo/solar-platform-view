@@ -1,0 +1,33 @@
+@import (reference) '../../static/themes/default.less';
+.wanke-menu-tree {
+  .menu-item {
+    padding: 22px;
+    &:not(:last-child) {
+      border-bottom: 1px dashed @cardBorderColor;
+    }
+
+    .ant-checkbox-wrapper {
+      margin-left: 0;
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+  .menu-item-sub {
+    margin-bottom: 8px;
+  }
+  .menu-item-list {
+    margin-left: 24px;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .wanke-menu-tree {
+    .menu-item {
+      &:not(:last-child) {
+        border-bottom: 1px dashed @cardBorderColor;
+      }
+    }
+  }
+}

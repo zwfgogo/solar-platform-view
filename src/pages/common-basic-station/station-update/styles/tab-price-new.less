@@ -1,0 +1,82 @@
+.tab-price-new-box {
+  width: 100%;
+  min-height: 330px;
+  max-height: 550px;
+  overflow-y: auto;
+  margin-bottom: 37px;
+  .tab-price-new-box-href {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+  }
+
+  .buttonDiv {
+    width: 700;
+    height: 63;
+    padding: 24px;
+    text-align: right;
+    background: transparent;
+    border-radius: 0 0 2px 2px;
+  }
+
+  &-header {
+    display: flex;
+    font-size: 14px;
+    height: 46px;
+    line-height: 30px;
+    padding: 8px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      width: 1px;
+      height: 30px;
+    }
+  }
+
+  &-title {
+    flex-grow: 1;
+  }
+
+  &-href {
+    flex-grow: 1;
+    text-align: right;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &-sub {
+    padding: 10px 15px;
+
+    &-title {
+      height: 40px;
+      line-height: 40px;
+
+      &>span:last-of-type {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .ant-tabs-content-holder{
+    max-height: 450px;
+    overflow-y: auto;
+  }
+}
+
+.priceModal{
+  overflow: hidden;
+  .ant-modal-header{
+    .ant-modal-title{
+      font-weight: bold;
+    }
+  }
+}
+
+.delete-modal-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

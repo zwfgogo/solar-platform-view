@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
+    <% if (context.title != null) { %>
+        <title><%= context.title %></title>
+    <% } %>
+    <script>
+      window.ddd = function () {
+        setTimeout(()=> {
+          debugger
+        }, 2500)
+      }
+
+      let consoleWarn = console.warn
+
+      console.warn = function(message) {
+        if (typeof message == 'string' && message.indexOf('componentWillMount has been renamed') !== -1) {
+          return
+        }
+        if (typeof message == 'string' && message.indexOf('React does not recognize the `dataSource` prop on a DOM element') !== -1) {
+          return
+        }
+        if (typeof message == 'string' && message.indexOf('Instance created by `useForm` is not connect to any') !== -1) {
+          return
+        }
+        consoleWarn.apply(console, arguments)
+      }
+
+      let consoleError = console.error
+
+      console.error = function(message) {
+        if (typeof message == 'string' && message.indexOf('Encountered two children with the same key') !== -1) {
+          return
+        }
+        if (typeof message == 'string' && message.indexOf('React does not recognize the `dataSource` prop on a DOM element') !== -1) {
+          return
+        }
+        if (typeof message == 'string' && message.indexOf('Instance created by `useForm` is not connect to any') !== -1) {
+          return
+        }
+        if (typeof message == 'string' && message.indexOf('Each child in a list should have a unique "key" prop') !== -1) {
+          return
+        }
+        consoleError.apply(console, arguments)
+      }
+
+    </script>
+    <script src="<%= context.config.publicPath %>d3.v5.min.js"></script>
+    <script src="<%= context.config.publicPath %>echarts.min.js?_v=5.1.2"></script>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=vFbPgoPVMKv3F49X55P74FEfGYSW5gKo"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDVf6W-o88xtz4cOgS0BXgmhUU32i2tsWI&callback=initGoogleMap" async></script>
+    <script>
+        window.publicPath = '<%= context.config.publicPath %>'
+        window.googlePromise = new Promise((resolve, reject) => { window.googlePromiseResolve = resolve })
+        window.googleMapAble = false
+        function initGoogleMap() {
+          googleMapAble = true
+          window.googlePromiseResolve && window.googlePromiseResolve();
+        }
+    </script>
+</head>
+<body class="light-theme">
+
+<div id="<%= context.config.mountElementId %>"></div>
+
+</body>
+</html>
+<!--buildDatetime Mon Jan 25 2021 15:19:03 GMT+0800 (GMT+08:00)-->

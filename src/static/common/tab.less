@@ -1,0 +1,29 @@
+.ant-tabs.full {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .ant-tabs-content {
+      flex: 1;
+  }
+
+  .ant-tabs-tabpane {
+      height: 100%;
+  }
+}
+
+// tab下划线
+.ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-ink-bar,
+.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-ink-bar {
+    height: 4px;
+    border-radius: 4px;
+}
+
+.ant-tabs-card.origin-tab {
+  & > .ant-tabs-nav .ant-tabs-tab,
+  & > div > .ant-tabs-nav .ant-tabs-tab {
+    background-color: transparent;
+  }
+}

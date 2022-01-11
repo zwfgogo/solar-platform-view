@@ -1,0 +1,66 @@
+.common-station-tree {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 10px;
+  background-color: #ffffff;
+  :global {
+    .ant-input,
+    .ant-btn {
+      border-radius: 0;
+    }
+    .ant-btn {
+      padding: 0 10px;
+    }
+  }
+}
+
+.filter-box {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  overflow: auto;
+  padding: 0 10px;
+  min-height: 100px;
+  margin-bottom: 10px;
+
+  :global {
+    .full-loading {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.custom-tree-node {
+  cursor: pointer;
+}
+
+.custom-tree-node-active {
+  color: #3588fe;
+}
+
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+  border-top: 1px solid #f0f2f5;
+  padding: 5px 0 3px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #3d7eff;
+}
+
+:global(.dark-theme) {
+  .common-station-tree {
+    background: #111624;
+  }
+  .footer {
+    border-top: 1px solid #2d2d2d;
+  }
+}

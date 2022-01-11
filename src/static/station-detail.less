@@ -1,0 +1,210 @@
+.station-detail-page,
+.station-update-page {
+    display       : flex;
+    flex-direction: column;
+    overflow      : hidden;
+
+    .ant-tabs-bar {
+        margin-bottom: 0;
+    }
+    .position-type {
+        width: 315px;
+    }
+    .price-item {
+        position     : relative;
+        width        : 350px;
+        height       : 200px;
+        border-radius: 5px;
+        border       : 1px solid #dedede;
+        padding      : 12px 20px 25px;
+        overflow     : hidden;
+        margin       : 0 10px 10px 0;
+
+        .month {
+            color: #3588fe;
+        }
+
+        .select-item {
+            position     : absolute;
+            top          : 0;
+            left         : 0;
+            right        : 0;
+            bottom       : 0;
+            border-radius: 5px;
+            z-index      : 9;
+
+            .select-item-text {
+                background   : #3d7eff;
+                cursor       : pointer;
+                border-radius: 4px;
+                padding      : 5px 15px;
+                color        : #fff;
+            }
+        }
+
+        .selected-item {
+            position                  : absolute;
+            height                    : 20px;
+            left                      : 0;
+            right                     : 0;
+            bottom                    : 0;
+            background                : #3d7eff;
+            z-index                   : 9;
+            color                     : #fff;
+            border-bottom-left-radius : 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+.station-input {
+    width: 325px;
+}
+
+//选择经纬度
+.station-map-select-page {
+    position: relative;
+    height  : 100%;
+
+    .getting-position {
+        position       : absolute;
+        right          : 0;
+        top            : 0;
+        left           : 0;
+        bottom         : 0;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+    }
+
+    .current-position-info {
+        background: #fff;
+        position  : absolute;
+        right     : 10px;
+        top       : 0;
+        width     : 218px;
+        padding   : 17px 20px;
+
+        .header {
+            color: #000000;
+        }
+
+        .position-info {
+            margin       : 10px 0;
+            border       : 1px solid #eee;
+            border-radius: 3px;
+            padding      : 5px 5px;
+        }
+
+        .confirm {
+            button {
+                width: 85px;
+            }
+        }
+    }
+
+    .citylist_popup_main .city_content_top {
+        height     : 40px;
+        padding-top: 10px;
+    }
+}
+
+.detail-item {
+    display      : inline-flex;
+    word-break   : break-word;
+    width        : 270px;
+    margin-right : 15px;
+    margin-bottom: 10px;
+    min-height   : 40px;
+
+    .item-label {
+        width: 110px;
+        color: rgba(5,10,25,0.45);
+        text-align: right;
+    }
+
+    .item-txt {
+        color: #666666;
+        flex : 1;
+    }
+}
+
+//新的detail-item style
+.style2 {
+    &.detail-item {
+        width: 315px;
+
+        .item-label {
+            width: auto;
+        }
+
+    }
+}
+
+// .terminal {
+//     .detail-item {
+//         margin-bottom: unset;
+//         min-height: unset;
+
+//         .item-label {
+//             width: unset;
+//         }
+
+//     }
+// }
+
+.first_div {
+    .empty {
+        color: #bbb;
+    }
+
+    padding   : 20px 25px;
+    width     : 80%;
+    text-align: center;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.slick-slide>div {
+    margin-top: 20px;
+}
+
+.price-detail-dialog {
+    .month {
+        color: #3588fe;
+    }
+}
+
+.zh {
+    .station-update-page {
+        .position-type {
+            width: 400px;
+            display: flex;
+            .ant-form-item-label {
+                width: 110px;
+            }
+        }
+    }
+}
+
+.dark-theme {
+
+    .station-detail-page,
+    .station-update-page {
+        .price-item {
+            border: 1px solid #2d2d2d;
+        }
+    }
+
+    .station-map-select-page {
+        .current-position-info {
+            background: #141414;
+
+            .header {
+                color: #fff;
+            }
+        }
+    }
+}

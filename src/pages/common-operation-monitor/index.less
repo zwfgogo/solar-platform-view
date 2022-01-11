@@ -1,0 +1,291 @@
+.page-box{
+  overflow-y: auto;
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.page-first-item {
+  border-radius: 4px;
+  height: 100%;
+  width: 480px;
+  // display: flex;
+  // flex-direction: column;
+  .table-box {
+    display: inline-block;
+    box-sizing: border-box;
+    height: calc(100% - 20px);
+    margin-left: 16px;
+    width: calc(100% - 540px);
+    margin-top: 17px;
+  }
+
+  .card-box {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    padding: 16px 0px;
+    border-radius: 4px;
+    border: none !important;
+    height: 242px;
+    .card-empty{
+      width: 100%;
+      height: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-title {
+      font-family: PingFangSC-Medium;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        background: #3D7EFF;
+        margin-right: 14px;
+        height: 12px;
+        width: 2px;
+      }
+    }
+
+    .card-display {
+      display: flex;
+      margin-top: 14px;
+      margin-left: 16px;
+
+      &-item {
+        flex: 1;
+        font-weight: 400;
+
+        &-label {
+          height: 24px;
+          line-height: 24px;
+        }
+
+        &-value {
+          height: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .card-footer {
+      height: 117px;
+      margin: 16px 16px 0px 16px;
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      .card-context {
+        &-title {}
+
+        &-value {
+          font-size: 38px;
+          color: #3D7EFF;
+          text-align: left;
+          font-weight: 500;
+          & > span{
+            font-size: 16px;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .card-type {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(61, 126, 255, 0.10);
+        height: 22px;
+        line-height: 22px;
+        padding: 0px 8px;
+        border-radius: 4px;
+        .card-icon {
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #3D7EFF;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .page-card-list{
+    padding: 0px 16px;
+    height: calc(100% - 242px);
+    &-title{
+      font-size: 16px;
+    }
+    &-body{
+      width: 100%;
+      height: calc(100% - 48px);
+      overflow-y: auto;
+      margin-top: 8px;
+      .page-card-list-item{
+        padding: 16px;
+        position: relative;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        &:last-of-type{
+          margin-bottom: 0px;
+        }
+        &-title{
+          font-size: 16px;
+        }
+
+        &-body{
+          width: 100%;
+          margin-top: 13px;
+          .field-item{
+            display: inline-block;
+            width: 33.33%;
+            &-value{
+              margin-top: 6px;
+              font-weight: 500;
+              font-size: 14px;
+              span{
+                margin-left: 4px;
+                font-weight: 400;
+              }
+            }
+          }
+          .page-right-top{
+            position: absolute;
+            right: 2px;
+            top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-item{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 16px;
+}
+
+.page-second-item {
+  // height: calc(50% - 154px);
+  position: relative;
+  min-height: 250px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  flex-direction: column;
+  flex: 1;
+  .wanke_selection{
+    width: auto;
+    height: 100%;
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  .wanke-chart-empty{
+    height: calc(100% + 10px);
+  }
+}
+
+.page-last-item {
+  min-height: 250px;
+  border-radius: 4px;
+  // margin-top: 16px;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  .common-echart-empty{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+    top: 50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.25);
+    img{
+      margin-top: -30px;
+    }
+  }
+
+  .wanke_selection{
+    width: auto;
+    height: 100%;
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  .wanke-chart-empty{
+    height: calc(100% + 10px);
+  }
+}
+
+.page-next-item{
+  // height: 484px;
+  height: calc(33.33% - 16px);
+  border-radius: 4px;
+  margin-top: 16px;
+  flex-direction: column;
+  position: relative;
+
+  .wanke_selection{
+    width: auto;
+    height: 100%;
+    display: inline-flex !important;
+    align-items: center;
+  }
+}
+
+
+.page-title{
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #e6e6e8;
+  padding: 0px 16px;
+  &::before{
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 11px;
+    margin-right: 8px;
+    background-color: #3D7EFF;
+  }
+
+  .right-icon{
+    float: right;
+    padding: 0px 8px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(5,10,25,0.05);
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+}
+
+.page-screen{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.page-body{
+  height: calc(100% - 50px);
+  padding-top: 10px;
+  .wanke-horizontal-scroll-list{
+    justify-content: flex-end !important;
+  }
+}

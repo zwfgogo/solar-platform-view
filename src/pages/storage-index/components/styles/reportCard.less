@@ -1,0 +1,69 @@
+.report-card {
+  position: relative;
+  padding: 0 10px 5px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    flex-shrink: 0;
+  }
+  .scroll-container {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .report-item {
+    word-break: break-all;
+    cursor: pointer;
+    .icon {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 7px;
+    }
+    .level-tag {
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .content {
+      color: #333333;
+    }
+  }
+  .middle {
+    .icon {
+      background-color: #ff8328;
+    }
+    .level-tag {
+      color: #ff8328;
+    }
+  }
+  .badly {
+    .icon {
+      background-color: #e73d3d;
+    }
+    .level-tag {
+      color: #e73d3d;
+    }
+  }
+  .normal {
+    .icon {
+      background-color: rgba(5,10,25,0.15);
+    }
+  }
+}
+
+:global(.dark-theme) {
+.report-card {
+  .report-item {
+    .content {
+      color: #fff;
+    }
+  }
+  
+  .normal {
+    .icon {
+      background-color: rgba(255,255,255,0.45);
+    }
+  }
+}
+}

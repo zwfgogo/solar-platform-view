@@ -1,0 +1,935 @@
+.level-config-page {
+  display: flex;
+  background-color: transparent !important;
+  flex-direction: column;
+  margin-bottom: 0px !important;
+
+  &-item {
+    flex: 1;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    max-height: 33.3%;
+
+    .label-info:before {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      background: url('../../../static/img/abnormal-alarm/info.svg');
+    }
+
+    .label-warning:before {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      background: url('../../../static/img/abnormal-alarm/warning.svg');
+    }
+
+    .label-error:before {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      background: url('../../../static/img/abnormal-alarm/error.svg');
+    }
+
+    label {
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .card-body {
+      display: flex;
+      height: calc(100% - 36px);
+
+      &-item {
+        padding: 0px 16px;
+        border-radius: 4px;
+        margin-top: 16px;
+        flex: 1;
+        max-width: 33.3%;
+        margin-right: 16px;
+        padding-bottom: 16px;
+
+        &:last-of-type {
+          margin-right: 0px;
+        }
+
+        .label {
+          width: 100%;
+          margin: 0;
+          font-size: 16px;
+          font-weight: 400;
+          display: flex;
+          width: 100%;
+          height: 49px;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .card-detail {
+          position: relative;
+          padding-top: 16px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          height: calc(100% - 49px);
+
+          &::-webkit-scrollbar{
+            background-color: transparent;
+          }
+
+          &-switch {
+            margin-top: 3px;
+          }
+
+          &-select-title {
+            position: absolute;
+            top: 4px;
+            left: 130px;
+          }
+
+          .card-detail-select-box {
+            position: absolute;
+
+
+          }
+
+          &-select {
+            margin-left: 124px;
+            margin-top: 0px;
+
+            .ant-select-selector {
+              background-color: transparent;
+            }
+
+            .ant-select-selection-overflow {
+              position: absolute;
+              left: -121px;
+              top: 41px;
+              width: calc(33.33vw - 157px);
+              max-width: none;
+              // padding-bottom: 16px;
+              height: auto;
+              .ant-select-selection-overflow-item{
+                margin: 4px;
+                .select-tag{
+                  border: none;
+                }
+              }
+            }
+          }
+
+          .card-detail-title {
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          .btn_receiver {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 短信接收人page
+.rc-page-header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+
+  .rc-page-title {
+    font-size: 16px;
+    font-weight: bold;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 12px;
+      background: #3D7EFF;
+      margin-right: 12px;
+    }
+  }
+}
+
+.rc-page-body {
+  height: calc(100% - 52px);
+  padding: 0px 16px 16px;
+  display: flex;
+  flex-direction: column;
+
+  .rc-page-btn-groups {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: 50px;
+    padding: 0px 16px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .rc-page-table-box {
+    height: calc(100% - 84px);
+
+    .ant-table-cell {
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+
+    table>tbody>tr>td {
+      border-right: none !important;
+    }
+
+    table>thead>tr>th {
+      border-right: none !important;
+    }
+  }
+}
+
+.receiver-delete-modal {
+  .ant-modal-confirm-body-wrapper {
+    display: flex;
+  }
+
+  .ant-modal-body {
+    padding: 24px !important;
+  }
+}
+
+.receiver-add-modal-box {
+  max-height: 578px;
+
+  .footer {
+    padding: 16px;
+    text-align: right;
+  }
+
+  .ant-table-body {
+    max-height: 409px !important;
+  }
+
+  .table-ellipsis {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ant-table-empty {
+    .ant-table-body {
+      overflow-y: hidden !important;
+    }
+  }
+
+  .ant-tabs-nav-more {
+    width: 206px;
+    text-align: left;
+  }
+
+  .ant-tabs-tab {
+    padding: 6px 8px !important;
+    border-radius: 4px 4px 0px 0px !important;
+    background-color: transparent !important;
+    margin-right: 4px !important;
+
+    .ant-tabs-tab-btn {
+      font-size: 14px;
+    }
+
+    &:last-of-type {
+      margin-right: 0px !important;
+    }
+  }
+
+  .tabs-empty {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    border-radius: 4px;
+
+    .ant-empty-image {
+      height: auto;
+    }
+
+    .empty-img {
+      background: url('../../../static/img/empty-icon.svg') no-repeat;
+      background-size: 100% 100%;
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+}
+
+// 普通用户级别配置
+.level-config-page-user {
+  background-color: transparent !important;
+  display: flex;
+  flex-direction: row;
+
+  &-item {
+    flex: 1;
+    max-width: 33.3%;
+    max-height: 136px;
+    margin-right: 16px;
+    border-radius: 4px;
+    padding: 16px;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+
+    .label-info:before {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      background: url('../../../static/img/abnormal-alarm/info.svg');
+    }
+
+    .label-warning:before {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      background: url('../../../static/img/abnormal-alarm/warning.svg');
+    }
+
+    .label-error:before {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      background: url('../../../static/img/abnormal-alarm/error.svg');
+    }
+
+    label {
+      font-size: 20px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    .card-body {
+      display: flex;
+      height: calc(100% - 52px);
+      margin-top: 16px;
+
+      &-item {
+        flex: 1;
+        max-width: 33.3%;
+        margin-right: 8px;
+        border-radius: 4px;
+        display: flex;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        .label {
+          font-size: 16px;
+          font-weight: 400;
+          width: 100%;
+          padding: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+// 类型配置
+.alarm-type-page-body {
+  margin-top: 16px;
+  flex: 1;
+  padding: 0px 16px;
+
+  .alarm-type-page-btn-groups {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    padding: 0px 16px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .alarm-type-page-table-box {
+    height: calc(100% - 90px);
+    position: relative;
+  }
+}
+
+.ant-form-horizontal.alarm-type-modal-form {
+  .ant-form-item-label {
+    width: 90px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 22px;
+  }
+}
+
+// 异常规则部分
+.alarm-rules-page {
+
+  // background-color: transparent;
+  .formLayout .ant-form-item-label {
+    max-width: 70px !important;
+    width: 70px !important;
+  }
+
+  .alarm-rules-tabs-body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+    .formLayout {
+      // box-shadow: none;
+      height: 112px;
+      margin-bottom: 16px;
+
+      .form-item {
+        width: 22.5%;
+      }
+    }
+
+    .alarm-rules-body {
+      // flex: 1;
+      height: calc(100% - 128px);
+      padding: 0px 16px 16px;
+
+      .alarm-rules-page-btn-groups {
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: flex-start;
+        height: 50px;
+        padding: 0px 16px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+
+      .alarm-rules-page-table-box {
+        height: calc(100% - 81px);
+      }
+    }
+  }
+
+  // .ant-tabs {
+  //   height: 100%;
+
+  //   .ant-tabs-content {
+  //     height: 100%;
+
+  //     .ant-tabs-tabpane {
+  //       padding: 0px 16px 16px;
+
+
+  //     }
+  //   }
+  // }
+}
+
+.alarm-rules-edit-page {
+  height: 100%;
+
+  .alarm-rules-edit-header {
+    height: 51px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 2px;
+      height: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #3D7EFF;
+      margin-right: 8px;
+      margin-left: 16px;
+    }
+  }
+
+  .alarm-rules-form {
+    padding: 16px;
+    height: calc(100% - 51px);
+
+    .ant-form-item {
+      margin-bottom: 24px !important;
+      margin-top: 8px !important;
+    }
+
+    .ant-form-item-control-input-content {
+      .ant-form-item {
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+      }
+    }
+
+    .alarm-rules-form-first {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      // height: 64px;
+      .station-form-item {
+        .ant-form-item-control-input-content {
+          line-height: 2.3;
+        }
+
+        .ant-switch {
+          margin-top: -3px;
+        }
+      }
+
+      .alarm-rules-form-view {
+        display: flex;
+
+        label {
+          font-size: 14px;
+          font-weight: 400;
+
+          &::after {
+            display: inline-block;
+            content: ':';
+          }
+        }
+
+        .form-view-value {
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        &:last-of-type {
+          flex: 1;
+        }
+      }
+
+    }
+
+    .alarm-rules-form-first-device {
+      display: inline-flex;
+      width: calc(100% - 300px);
+
+      .ant-form-item {
+        display: inline-flex;
+      }
+
+      .station-form-item {
+        width: 100%;
+      }
+    }
+
+    .alarm-rules-context {
+      border-radius: 4px;
+
+      &-header {
+        font-size: 16px;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        margin: 12px 0px;
+
+        &::before {
+          display: inline-block;
+          width: 2px;
+          height: 12px;
+          margin-left: -1px;
+          margin-right: 16px;
+          content: '';
+          background-color: #3D7EFF;
+        }
+      }
+
+      .alarm-type-form-list {
+        margin: 16px 16px 0px;
+        border-radius: 4px;
+        padding: 16px;
+        position: relative;
+
+        &:nth-of-type(2) {
+          margin-top: 0;
+        }
+
+        .delete-btn {
+          position: absolute;
+          right: 16px;
+          top: 16px;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: rgba(61, 126, 255, 0.25);
+          color: rgba(61, 126, 255, 1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+      }
+
+      .formula-box {
+        position: relative;
+
+        label {
+          vertical-align: top;
+
+          &::before {
+            display: inline-block;
+            margin-right: 4px;
+            color: #ff4d4f;
+            font-size: 14px;
+            font-family: SimSun, sans-serif;
+            line-height: 1;
+            content: '*';
+          }
+        }
+
+        .formula-border-text {
+          display: inline-block;
+          border-radius: 4px;
+          padding-bottom: 30px;
+          border: 1px solid rgba(5, 10, 25, 0.25);
+        }
+
+        .add-text-btn {
+          font-size: 12px;
+          color: #3D7EFF;
+          font-weight: 400;
+          position: absolute;
+          padding: 4px 8px;
+          background-color: rgba(61, 126, 255, 0.10);
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        textarea {
+          border: none;
+        }
+
+        .ant-form-item-control-input-content {
+          padding-bottom: 26px;
+          border-radius: 4px;
+          flex: 0;
+        }
+      }
+
+      .alarmCalcType-box {
+        display: flex;
+
+        .ant-radio {
+          margin-right: 12px;
+        }
+      }
+
+      .relatedPointDataTypes {
+        .addRelatedPointDataTypes {
+          margin: 0px 8px;
+          border: rgba(61, 126, 255, 1) 1px solid;
+          color: rgba(61, 126, 255, 1);
+          padding: 8px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+
+        .dataShowItem {
+          margin-left: 8px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0px 6px;
+          height: 32px;
+          border-radius: 4px;
+        }
+      }
+
+      .plus-block-btn {
+        margin: 16px;
+        background-color: transparent;
+        width: -webkit-fill-available;
+      }
+    }
+  }
+}
+
+.alarm-rules-view-page {
+  .alarm-rules-edit-header {
+    height: 51px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 16px;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 2px;
+      height: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #3D7EFF;
+      margin-right: 8px;
+    }
+  }
+
+  .alarm-rules-form-first {
+    width: 100%;
+    // height: 62px;
+    display: flex;
+    // align-items: center;
+    padding: 0px 16px;
+    flex-direction: column;
+  }
+
+  .alarm-rules-form-view {
+    display: flex;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 8px 0px;
+    label {
+      display: inline-block;
+
+      // min-width: 70px;
+      &::after {
+        display: inline-block;
+        content: ':';
+        margin-right: 10px;
+      }
+    }
+
+    .form-view-value {
+      display: inline-block;
+      flex: 1;
+    }
+
+    &:last-of-type {
+      flex: 1
+    }
+  }
+
+  .alarm-rules-context {
+    margin: 0px 16px;
+    border-radius: 4px;
+
+    &-header {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 13px 0px;
+
+      &::before {
+        display: inline-block;
+        content: '';
+        width: 2px;
+        height: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #3D7EFF;
+        margin-right: 8px;
+      }
+    }
+
+    .alarm-rules-context {
+      margin-bottom: 16px;
+      padding: 22px 18px 0px 18px;
+
+      .alarm-rules-form-view {
+        margin: 22px 0px;
+        display: flex;
+        align-items: center;
+      }
+
+      .data-type-card {
+        flex: none;
+        display: inline-block;
+        width: auto;
+        max-width: calc(100% - 80px);
+        padding: 6px 8px;
+        margin-right: 8px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.alarm-table {
+  .ant-table-thead tr th:not(.ant-table-selection-column) {
+    // padding-left: 0;
+  }
+
+  .ant-table-tbody tr td:not(.ant-table-selection-column) {
+    // padding-left: 0;
+  }
+}
+
+.en {
+  .alarm-rules-page {
+    .formLayout .ant-form-item-label {
+      max-width: 130px !important;
+      width: 130px !important;
+    }
+  }
+}
+
+.light-theme {
+  .alarm-rules-page {
+    .alarm-rules-body {
+      background-color: #fff;
+
+      .alarm-rules-page-btn-groups {
+        border: 1px solid rgba(5, 10, 25, 0.1);
+        background-color: rgba(5, 10, 25, 0.02);
+      }
+    }
+  }
+
+  .receiver-add-modal-box {
+    .ant-tabs-tab {
+      border: 1px solid rgba(5, 10, 25, 0.1) !important;
+      border-bottom: none !important;
+
+      .ant-tabs-tab-btn {
+        color: rgba(5, 10, 25, 0.45) !important;
+      }
+    }
+
+    .ant-tabs-tab-active {
+      border-bottom: 1px solid #fff !important;
+
+      .ant-tabs-tab-btn {
+        color: #3D7EFF !important;
+      }
+    }
+
+    .tabs-empty {
+      border: 1px solid rgba(5, 10, 25, 0.1);
+
+      .ant-empty-description {
+        color: rgba(5, 10, 25, 0.25);
+      }
+
+      .empty-img {
+        background: url('../../../static/img/empty-icon.svg') no-repeat;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .alarm-rules-page {
+    .alarm-rules-body {
+      background-color: rgba(255, 255, 255, 0.05);
+
+      .alarm-rules-page-btn-groups {
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background-color: rgba(5, 10, 25, 0.05);
+      }
+    }
+  }
+
+  .receiver-add-modal-box {
+    .ant-tabs-tab {
+      border: 1px solid rgba(255, 255, 255, 0.10) !important;
+      border-bottom: none !important;
+
+      .ant-tabs-tab-btn {
+        color: rgba(255, 255, 255, 0.45) !important;
+      }
+    }
+
+    .ant-tabs-tab-active {
+      border-bottom: 1px solid rgb(5, 10, 25) !important;
+
+      .ant-tabs-tab-btn {
+        color: #3D7EFF !important;
+      }
+    }
+
+    .tabs-empty {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      .ant-empty-description {
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      .empty-img {
+        background: url('../../../static/img/empty-icon-dark.svg') no-repeat;
+      }
+    }
+  }
+}
+
+
+.richText-box {
+  width: 100%;
+  outline: none;
+  height: 118px;
+  overflow-y: auto;
+  padding: 4px 8px;
+
+  .view-box {
+    padding: 0px 8px;
+    margin: 0px 8px 4px;
+    user-select: none;
+    border-radius: 4px;
+    line-height: 1.5;
+  }
+}
+
+.light-theme {
+  .richText-box {
+    .view-box {
+      color: rgba(5, 10, 25, 0.85);
+      background-color: rgba(5, 10, 25, 0.05);
+    }
+  }
+
+  .level-config-page-item .card-body-item .card-detail-select .ant-select-selection-overflow .ant-select-selection-overflow-item .select-tag{
+    background-color: rgba(5,10,25,0.05);
+  }
+}
+
+.dark-theme {
+  .richText-box {
+    .view-box {
+      color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .formula-border-text {
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  }
+
+  .level-config-page-item .card-body-item .card-detail-select .ant-select-selection-overflow .ant-select-selection-overflow-item .select-tag{
+    background-color: rgba(255,255,255,0.05);
+  }
+}

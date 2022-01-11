@@ -1,0 +1,25 @@
+.deviceInfo {
+    background-color: #F9F9F9;
+    height: 31px;
+    width: 100%;
+    padding: 0 24px;
+    border: solid 0.3px rgba(189, 189, 189, 0.2);
+    border-radius: 4px;
+
+    div {
+        line-height: 30px;
+    }
+
+    .deviceItem:not(:last-child) {
+        border-right: solid 0.3px rgba(189, 189, 189, 0.2);
+        padding-right: 5px;
+        margin-right: 5px;
+    }
+}
+
+:global(.dark-theme) {
+    .deviceInfo {
+        background-color: #1E1E28;
+        border: none;
+    }
+}

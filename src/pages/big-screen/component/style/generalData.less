@@ -1,0 +1,57 @@
+.top {
+    position: relative;
+
+    &::before {
+        content: "";
+        background: url('../../img/storge.png') no-repeat center top;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9;
+    }
+}
+
+.bottom {
+    position: relative;
+
+    &::before {
+        content: "";
+        background: url('../../img/pv.png') no-repeat center top;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9;
+    }
+}
+
+.top,
+.bottom {
+    h1 {
+        color: #fff;
+        position: relative;
+    }
+
+    .data {
+        display: flex;
+        flex-wrap: wrap;
+        color: #fff;
+
+        >.storge {
+            width: 33%;
+            height: 50%;
+        }
+
+        >.pv {
+            width: 33%;
+            height: 100%;
+        }
+
+
+    }
+}

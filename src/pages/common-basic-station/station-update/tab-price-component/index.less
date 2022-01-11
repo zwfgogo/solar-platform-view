@@ -1,0 +1,313 @@
+.tab-price-new {
+  width: 100%;
+  height: calc(100% - 46px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .ant-spin {
+    margin-top: 133px;
+  }
+
+  .ant-form-item-label {
+    width: 108px;
+  }
+
+  &-empty {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-btn-href {
+    // text-decoration: underline;
+    cursor: pointer;
+    display: inline;
+
+    &-disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .ant-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .dealers-row{
+      .ant-form-item-label{
+        width: auto;
+      }
+    }
+
+    .ant-form-item-explain {
+      display: block;
+    }
+
+    .first-form-item {
+      display: flex;
+      flex-direction: row;
+
+      .ant-col {
+        display: inline-block;
+      }
+
+      .ant-form-item-label {
+        width: 70px;
+      }
+
+      .ant-form-item-control {
+        flex-grow: 1;
+      }
+    }
+
+    .remove-btn-href {
+      text-decoration: underline;
+      cursor: pointer;
+      position: relative;
+      top: 41px;
+      left: 8px;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dealers-row {
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      position: relative;
+
+      // border: none;
+      .ant-form-item-explain {
+        min-height: 0;
+      }
+
+      &:not(::last-of-type) {
+        margin-bottom: 16px;
+      }
+
+      .dealers-month-row {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 8px;
+        padding-top: 8px;
+        border-radius: 4px;
+        margin: 8px 0px;
+        position: relative;
+        // &:first-child{
+        //   margin-top: 0;
+        // }
+      }
+
+      .ant-form-item {
+        margin-right: 5px;
+      }
+
+      .form-item-width {
+        width: 194px
+      }
+
+      .edit-form-extra {
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        left: 175px;
+        padding: 4px 0px;
+        width: 65px;
+        text-align: center;
+        border-radius: 3px;
+      }
+
+      .edit-form-extra-m {
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        left: 99px;
+        padding: 4px 0px;
+        width: 65px;
+        text-align: center;
+        border-radius: 3px;
+      }
+
+      .edit-form-extra-info {
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        left: 240px;
+        width: 50px;
+        margin-top: 2px;
+        text-align: center;
+        border-radius: 3px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .multiple-price {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 435px;
+
+        &>.ant-col {
+          display: flex;
+          flex-direction: row;
+
+          .multiple-price-value {
+            width: 255px;
+            position: relative;
+
+            .ant-form-item-extra {
+              position: absolute;
+              top: 0;
+              width: 0;
+            }
+          }
+
+          .multiple-price-time {
+            width: 343px;
+          }
+        }
+
+        .ant-form-item-extra {
+          height: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  &-sub {
+    padding: 10px 0px;
+    min-height: 52px;
+    flex-shrink: 0;
+    width: 100%;
+
+    &-title {
+      // height: 40px;
+      // line-height: 40px;
+      display: flex;
+      align-items: flex-start;
+
+      &>span:nth-of-type(2) {
+        margin-left: 16px;
+      }
+
+      .tab-price-new-sub-btn {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .ant-btn {
+          border-radius: 3px;
+
+          &:last-of-type {
+            margin-left: 10px;
+          }
+        }
+
+      }
+
+      .ant-form-item {
+        display: flex;
+
+        &-label {
+          width: auto;
+          min-width: 82px;
+          flex-grow: 0;
+        }
+
+        &-control {
+          flex: 1;
+        }
+      }
+
+    }
+  }
+
+  .ant-tabs {
+    flex-grow: 1;
+
+    .ant-tabs-tab {
+      margin: 0px;
+      border: 1px solid;
+      padding: 5px 15px;
+      transition: all .5s;
+    }
+
+    .ant-tabs-content {
+      height: 100%;
+
+      .ant-tabs-tabpane {
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-bottom: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        .tab-box {
+          height: auto;
+          min-height: 100%;
+          ;
+        }
+
+        .tab-price-body {
+          width: 100%;
+          padding-right: 8px;
+          border: none;
+          overflow: hidden;
+          position: relative;
+          min-height: 250px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          // &-first{
+          //   padding-top: 28px;
+          // }
+
+          &:last-of-type {
+            padding-bottom: 8px;
+
+          }
+
+          // &-last{
+          //   padding-bottom: 8px;
+          //   border-bottom: 1px solid;
+          // }
+        }
+      }
+    }
+  }
+
+  .add-btn-box {
+    padding: 12px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+}
+
+.ant-btn.blue-btn {
+  color: #3D7EFF;
+  border: 1px solid #3D7EFF;
+}
+
+.my-realtime-select {
+  width: 170px !important;
+  min-width: 170px !important;
+}
+
+.dark-theme {
+  .tab-price-new-empty {
+    .ant-empty-description {
+      color: rgba(255, 255, 255, 0.45);
+    }
+  }
+}

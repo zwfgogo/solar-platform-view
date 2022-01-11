@@ -1,0 +1,87 @@
+
+.form-container {
+    &.flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.input-item {
+    width: 280px;
+    margin-right: 35px;
+
+    &.w100 {
+        width: 100%;
+    }
+
+    .input-label {
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    .input-label-layout {
+        line-height: 40px;
+    }
+
+    .input-container {
+        display: flex;
+    }
+
+    &.row {
+        width: 100%;
+    }
+
+    .position {
+        display: flex;
+
+        .position-select {
+            min-width: 100px;
+            margin-right: 10px;
+        }
+    }
+
+    .input-suffix {
+        margin-left: 5px;
+    }
+}
+
+.zh .input-item {
+    width: 315px;
+    margin-right: 5px;
+    .ant-form-item-label {
+        width: 110px;
+    }
+}
+
+.input-item.h {
+    display: inline-flex;
+
+    .ant-form-item-label {
+        line-height: initial;
+        display: flex;
+        align-items: center;
+    }
+
+    .ant-form-item-control {
+        display: flex;
+        line-height: initial;
+    }
+
+    .ant-form-item {
+        display: flex;
+        margin-bottom: 0;
+
+        .ant-form-item-control-wrapper {
+            flex: 1;
+        }
+    }
+}
+
+.modify-input {
+    display: flex;
+    align-items: center;
+}
+
+.with-error {
+    border: 1px solid red;
+}

@@ -1,0 +1,70 @@
+@import (reference) '../static/common.less';
+
+@alarm-notification-icon-width: 30px;
+@alarm-notification-bg: #ffffff;
+@dark-alarm-notification-bg: #050A19;
+@alarm-notification-card-bg: rgba(61,126,255,0.10);
+@dark-alarm-notification-card-bg: rgba(61,126,255,0.10);
+@alarm-color-red: rgba(245,34,45,0.90);
+@alarm-color-orange: rgba(250,173,20,0.90);
+@alarm-color-blue: rgba(61,126,255,0.90);
+
+:global {
+  .alarm-notification {
+    background: @alarm-notification-bg;
+    .alarm-card {
+      display: flex;
+      padding: 5px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      background: @alarm-notification-card-bg;
+    }
+    .alarm-card-logo {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+    }
+    .alarm-card-content {
+      flex-grow: 1;
+      overflow: hidden;
+      p {
+        margin: 0;
+        display: flex;
+      }
+      span:first-child {
+        margin-right: 1em;
+        flex-shrink: 0;
+      }
+      span:last-child {
+        flex-grow: 1;
+        .ellipsis();
+      }
+    }
+
+    .alarm-card-logo-icon {
+      font-size: @alarm-notification-icon-width;
+      margin-bottom: 2px;
+      &.red {
+        color: @alarm-color-red;
+      }
+      &.orange {
+        color: @alarm-color-orange;
+      }
+      &.blue {
+        color: @alarm-color-blue;
+      }
+    }
+  }
+
+  .dark-theme {
+    .alarm-notification {
+      background: @dark-alarm-notification-bg;
+      .alarm-card {
+        background: @dark-alarm-notification-card-bg;
+      }
+    }
+  }
+}

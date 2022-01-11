@@ -1,0 +1,22 @@
+.tag-box{
+  display: inline-block;
+  margin-left: 10px;
+  .ant-tag{
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+    max-width: calc(12.5% - 8px);
+    border: none;
+    border-radius: 4px;
+    .anticon-close{
+      display: flex;
+      align-items: center;
+    }
+  }
+  .tag-text-ellipsis{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}

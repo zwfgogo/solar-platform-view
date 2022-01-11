@@ -1,0 +1,100 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #f0f2f5;
+  .form-container {
+    :global(.ant-form-item-label label) {
+      color: rgba(5,10,25,0.45);
+    }
+  }
+  .card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    &:not(:last-of-type) {
+      flex-shrink: 1;
+      margin-bottom: 20px;
+      :global(footer) {
+        padding: 24px 24px 8px;
+      }
+    }
+    &:last-of-type {
+      flex-grow: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      :global(footer) {
+        padding: 16px;
+        flex-grow: 1;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 16px !important;
+    }
+  }
+}
+
+.repair-btn {
+  background: #262626;
+  border: 1px solid;
+  line-height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.repair-tag {
+  color: #ff974a;
+  line-height: 1;
+  border: 1px solid #ff974a;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.new-plan-btn {
+  color: #3D7EFF;
+  border: 1px solid #3D7EFF;
+  padding: 4px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  &:hover {
+    border-color: #40a9ff;
+  }
+}
+
+.repair-btn-hang-up {
+  border-color: #ff974a;
+  color: #ff974a;
+}
+
+.repair-pick-off {
+  border-color: #177ddc;
+  color: #177ddc;
+}
+
+.delete-btn {
+  // color: #d32029;
+}
+
+:global(.dark-theme) {
+  .container {
+    background: #010615;
+    .form-container {
+      :global(.ant-form-item-label label) {
+        color: rgba(255,255,255,0.45);
+      }
+    }
+  }
+  .card {
+    background-color: #111624;
+  }
+}

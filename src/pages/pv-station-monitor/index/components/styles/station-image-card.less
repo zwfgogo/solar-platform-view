@@ -1,0 +1,63 @@
+@import (reference) "../../../../../static/common.less";
+@import (reference) './map-info-aside.less';
+
+.TipStatusColor() {
+  .put-in {
+    background-color: @PutInColor;
+  }
+  .building {
+    background-color: @BuildingColor;
+  }
+  .debug {
+    background-color: @DebugColor;
+  }
+  .try-running {
+    background-color: @TryRunningColor;
+  }
+  .stop {
+    background-color: @StopColor;
+  }
+}
+
+.image-box {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  .image-tip {
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0px 20px;
+    transform: rotate(45deg);
+  }
+  .TipStatusColor();
+}
+.image {
+  width: 100%;
+}
+.weather-info {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background: rgba(23, 23, 37, 0.4);
+  color: #ffffff;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 10px;
+  font-size: 12px;
+  overflow: hidden;
+  justify-content: space-between;
+  > span:first-child {
+    font-size: 14px;
+    .ellipsis();
+  }
+  .message-status {
+    display: flex;
+    align-items: center;
+  }
+}

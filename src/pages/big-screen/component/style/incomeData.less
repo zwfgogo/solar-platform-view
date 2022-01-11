@@ -1,0 +1,81 @@
+@keyframes rotation {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.top {
+    position: relative;
+
+    &::before {
+        content: "";
+        background: url('../../img/income.png') no-repeat center top;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9;
+    }
+}
+
+.bottom {
+    position: relative;
+
+    &::before {
+        content: "";
+        background: url('../../img/CDM.png') no-repeat center top;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9;
+    }
+}
+
+
+.top,
+.bottom {
+    h1 {
+        color: #fff;
+        position: relative;
+    }
+
+    .data {
+        display: flex;
+        flex-wrap: wrap;
+        color: #fff;
+
+        >.income,
+        .circle {
+            width: 33%;
+            height: 100%;
+            position: relative;
+        }
+
+        .cdm {
+            position: relative;
+            display: flex;
+            height: 100%;
+            flex: 1 1;
+            overflow: hidden;
+        }
+
+        .circle {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../../img/circle.png');
+            height: 40px;
+            width: 40px;
+            animation: rotation 3s linear infinite;
+            display: inline-block;
+        }
+    }
+}

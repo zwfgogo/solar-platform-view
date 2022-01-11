@@ -1,0 +1,50 @@
+.pageRunData {
+  background-color: #f0f2f5;
+}
+.tree-container {
+  display: flex;
+  flex-direction: column;
+  // 脱离文本流 性能优化
+  position: absolute;
+  left: 0;
+  height: calc(100% - 20px);
+  .filter-box {
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    :global(.ant-select-selection-item) {
+     opacity: 0.3; 
+    }
+  }
+  .tree-body {
+    flex-grow: 1;
+    overflow: auto;
+    position: relative;
+    z-index: 99;
+    transform: translateZ(0);
+  }
+}
+
+.diagram-tab-container {
+  :global {
+    .ant-tabs-bar {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tree-select-container {
+  width: 250px;
+  border-right: 1px solid #F1F1F5;
+  padding: 15px;
+  overflow: auto;
+}
+
+
+:global(.dark-theme) {
+  .pageRunData {
+    background-color: #141414;
+  }
+  .tree-select-container {
+    border-right: 1px solid #434343;
+  }
+}

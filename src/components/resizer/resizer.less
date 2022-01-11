@@ -1,0 +1,26 @@
+@import (reference) '../../static/themes/default.less';
+.resizer {
+  width: 12px;
+  height: 100%;
+  background: @wanke-resizer-bg;
+  cursor: e-resize;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .resizer-icon {
+    color: #999;
+    user-select: none;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .resizer {
+    background: @wanke-resizer-bg;
+    .resizer-icon {
+      color: #999;
+    }
+  }
+}

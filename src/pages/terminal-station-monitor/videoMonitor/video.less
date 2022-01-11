@@ -1,0 +1,62 @@
+.videoDiv {
+    padding: 2px;
+    position: relative;
+
+    .videoContent {
+        height: 100%;
+        background-color: #f0f2f5;
+        text-align: center;
+        position: relative;
+    }
+}
+
+.operation {
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.openFlash {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-Index: 100;
+}
+
+.openFlashTips {
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    left: 225px;
+    z-Index: 9999;
+    color: white
+}
+
+.zeroSet {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -75%);
+
+    >p {
+        color: #999999;
+        font-size: 16px;
+    }
+}
+
+:global(.dark-theme) {
+    .videoDiv {
+        .videoContent {
+            background-color: #000;
+
+            p {
+                color: #fff;
+            }
+        }
+    }
+
+}

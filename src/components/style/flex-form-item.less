@@ -1,0 +1,25 @@
+.flex-form-item,
+.flex-container :global(.ant-form-item) {
+  display: flex;
+  flex-direction: row!important;
+  flex-wrap: nowrap;
+  :global{
+    .ant-form-item-label,
+    .input-suffix {
+      flex-shrink: 0;
+      padding-bottom: 0;
+      align-items: baseline;
+      label {
+        line-height: inherit;
+        min-height: unset;
+      }
+    }
+    .ant-form-item-control {
+      flex-grow: 1;
+      word-break: break-all;
+      .ant-form-item-control-input {
+        min-height: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@import (reference) '../../../../../static/themes/default.less';
+@import (reference) '../../../../../static/common.less';
+
+.station-list {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: relative;
+  :global {
+    .ant-input-affix-wrapper {
+      background: rgba(61,126,255,0.05) !important;
+      border: none;
+    }
+    .ant-input,
+    .ant-btn {
+      border-radius: 0;
+    }
+    .ant-btn {
+      padding: 0 10px;
+    }
+  }
+}
+
+.filter-box {
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  padding: 8px;
+  :global {
+    .search-input {
+      flex-grow: 1;
+      margin-right: 8px;
+    }
+  }
+  .toggle-btn {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: rgba(61,126,255,0.05);
+  }
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  overflow: auto;
+  padding: 8px 16px 16px 16px;
+  min-height: 100px;
+
+  :global {
+    .full-loading {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.station-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .image {
+    flex-shrink: 0;
+  }
+  .info {
+    flex-grow: 1;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  .title {
+    .ellipsis();
+    font-size: 20px;
+    color: #44444f;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .address {
+    margin-bottom: 10px;
+  }
+  .address,
+  .capacity {
+    .ellipsis();
+    font-size: 14px;
+    color: #92929d;
+    .info-content {
+      color: @wanke-label-color;
+    }
+  }
+  .image {
+    width: 115px;
+    height: 85px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &.active,
+  &:hover {
+    background-color: rgba(61,126,255, 0.05);
+  }
+}
+
+:global(.dark-theme) {
+  @import (reference) '../../../../../static/themes/dark.less';
+  :global(.ant-input-affix-wrapper) {
+    background: rgba(255,255,255,0.1) !important;
+  }
+  .toggle-btn {
+    background: rgba(255,255,255,0.1);
+  }
+  .station-list {
+    background: #121625;
+  }
+  .station-card {
+    .title {
+      color: #fff;
+    }
+    &.active,
+    &:hover {
+      background-color: rgba(255,255,255,0.05);
+    }
+  }
+
+  .address,
+  .capacity {
+    .info-content {
+      color: @wanke-label-color;
+    }
+  }
+}

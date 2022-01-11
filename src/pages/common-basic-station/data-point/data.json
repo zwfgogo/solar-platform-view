@@ -1,0 +1,21 @@
+{
+  "deviceTypeId": 1706,
+  "deviceId": 5477,
+  "analogs": [
+    {
+      "title": "测试批量新增4",
+      "pointNumber": 4,
+      "signalTitle": "信号名称4"
+    },
+    {
+      "title": "测试批量新增2",
+      "pointNumber": 2,
+      "signalTitle": "信号名称2"
+    },
+    {
+      "title": "测试批量新增3",
+      "pointNumber": 3,
+      "signalTitle": "信号名称3"
+    }
+  ]
+}

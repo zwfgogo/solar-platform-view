@@ -1,0 +1,98 @@
+@import (reference) '../../../../static/themes/default.less';
+.alarm-point-data-modal {
+  .ant-checkbox-wrapper {
+    margin-left: 0!important;
+    margin-right: 30px!important;
+    margin-bottom: 10px;
+  }
+  .tag-box .ant-tag {
+    max-width: 200px;
+    margin-bottom: 6px;
+    padding: 2px 10px;
+  }
+  .ant-radio {
+    margin-right: 8px;
+  }
+}
+.alarm-point-data {
+  height: 540px;
+  display: flex;
+  overflow: hidden;
+  .alarm-point-data-tree-container {
+    width: 230px;
+    flex-shrink: 0;
+    padding-right: 16px;
+    position: relative;
+    border-right: 1px solid @cardBorderColor;
+  }
+  .alarm-point-data-body {
+    flex-grow: 1;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    & > * {
+      flex-shrink: 0;
+    }
+    .alarm-point-data-tags {
+      display: flex;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed @cardBorderColor;
+      margin-bottom: 16px;
+      min-height: 39px;
+    }
+    .alarm-point-data-tags-label {
+      flex-shrink: 0;
+    }
+    .alarm-point-data-tags-body {
+      flex-grow: 1;
+      max-height: 100px;
+      overflow: auto;
+    }
+    .alarm-point-data-filter {
+      margin-bottom: 10px;
+    }
+    .alarm-point-data-point-container {
+      flex-grow: 1;
+      flex-shrink: 1;
+      overflow: auto;
+      position: relative;
+    }
+  }
+
+  .alarm-point-data-point-list {
+    display: flex;
+    &:not(:last-of-type) {
+      border-bottom: 1px dashed @cardBorderColor;
+      margin-bottom: 8px;
+    }
+    .alarm-point-data-point-list-label {
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+    .alarm-point-data-point-list-body {
+      flex-grow: 1;
+      min-height: 32px;
+    }
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../../../static/themes/dark.less';
+  .alarm-point-data-modal {
+  }
+  .alarm-point-data {
+    .alarm-point-data-tree-container {
+      border-right: 1px solid @cardBorderColor;
+    }
+    .alarm-point-data-body {
+      .alarm-point-data-tags {
+        border-bottom: 1px dashed @cardBorderColor;
+      }
+    }
+    .alarm-point-data-point-list {
+      &:not(:last-of-type) {
+        border-bottom: 1px dashed @cardBorderColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+tr.drop-over-downward td {
+  border-bottom: 2px dashed #1890ff;
+}
+
+tr.drop-over-upward td {
+  border-top: 2px dashed #1890ff;
+}
+.ant-table-ping-right:not(.ant-table-scroll-horizontal) .ant-table-container::after {
+  box-shadow: none;
+}
+
+.ant-table{
+  .ant-table-body{
+      table{
+          border-spacing: 0 8px;
+          margin-top: -8px;
+      }
+  }
+
+  .ant-table-content{
+      table{
+          border-spacing: 0 8px;
+          margin-top: -8px;
+      }
+  }
+}
+
+.small-spacing-table {
+  .ant-table-body{
+      table{
+          border-spacing: 0 4px;
+          margin-top: -4px;
+      }
+  }
+  .ant-table-content{
+      table{
+          border-spacing: 0 4px;
+          margin-top: -4px;
+      }
+  }
+}
+
+.wanke-subfield-table {
+    .ant-table-thead > tr:not(:last-child) > th[colspan] {
+        border-bottom: 1px solid @cardBorderColor;
+    }
+
+    .ant-table-thead .ant-table-cell:not(:last-of-type) {
+        position: relative;
+        &::after {
+            display: block;
+            content: ' ';
+            width: 1px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: @cardBorderColor;
+        }
+        &[colspan] {
+            &::after {
+                transform: translateY(100%);
+            }
+        }
+    }
+    .ant-table-thead tr:first-child .ant-table-cell:nth-last-child(2),
+    .no-content-border {
+        &::after {
+            content: unset!important;
+        }
+    }
+}

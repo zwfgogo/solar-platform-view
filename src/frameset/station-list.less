@@ -1,0 +1,140 @@
+@import (reference) '../static/common.less';
+
+.station-list {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: absolute;
+    top: 7px;
+    left: 260px;
+    z-index: 999;
+
+    :global {
+
+        .ant-input,
+        .ant-btn {
+            border-radius: 0;
+        }
+
+        .ant-btn {
+            padding: 0 10px;
+        }
+    }
+}
+
+.filter-box {
+    flex-shrink: 0;
+    position: relative;
+
+    .toggle-btn {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.content {
+    position: relative;
+    flex-grow: 1;
+    overflow: auto;
+    padding: 10px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    max-height: 60vh;
+
+    :global {
+        .full-loading {
+            top: 0;
+            left: 0;
+        }
+
+        .ant-empty-image {
+            height: 80px;
+        }
+    }
+}
+
+.station-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+
+    .icon,
+    .image {
+        flex-shrink: 0;
+    }
+
+    .icon {
+        align-self: flex-start;
+        margin-right: 10px;
+    }
+
+    .info {
+        flex-grow: 1;
+        overflow: hidden;
+        margin-right: 10px;
+    }
+
+    .title {
+        .ellipsis();
+        font-size: 14px;
+        line-height: 20px;
+        height: 20px;
+        color: #44444f;
+    }
+
+    .address,
+    .capacity {
+        .ellipsis();
+        font-size: 12px;
+        line-height: 16px;
+        height: 16px;
+        color: #92929d;
+    }
+
+    .image {
+        width: 64px;
+        height: 48px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &.active,
+    &:hover {
+        background-color: #e2e2ea;
+    }
+}
+
+:global(.dark-theme) {
+    .station-list {
+        background: #141414;
+    }
+
+    .station-card {
+        .title {
+            color: #fff;
+        }
+
+        &.active, &:hover {
+            background-color: #000;
+        }
+    }
+}

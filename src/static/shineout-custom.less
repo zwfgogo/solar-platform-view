@@ -1,0 +1,43 @@
+.so-checkinput-disabled {
+  display: none;
+}
+
+.checkboxline {
+  .so-tree-content {
+    display: inline;
+    .so-tree-text {
+      display: inline;
+    }
+  }
+  .so-tree-children {
+    & > .so-tree-node {
+      display: inline;
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+      & > div {
+        display: inline;
+        & > .so-tree-content {
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    & > .so-tree-node:first-child {
+      display: inline;
+      &::before {
+        display: inline;
+        height: 14px;
+      }
+      &::after {
+        display: inline;
+      }
+      & > div {
+        display: inline;
+      }
+    }
+  }
+}

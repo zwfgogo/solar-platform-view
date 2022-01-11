@@ -1,0 +1,27 @@
+.toggle-btn {
+  color: #828282;
+  background-color: #E0E0E0;
+  font-size: 12px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  position: absolute;
+  z-index: 10;
+  cursor:  pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  &.to-left {
+    border-radius: 4px 0px 0px 4px;
+  }
+  &.to-right {
+    border-radius: 0px 4px 4px 0px;
+  }
+}
+
+:global(.dark-theme) {
+  .toggle-btn {
+    color: #111111;
+    background-color: #333333;
+  }
+}

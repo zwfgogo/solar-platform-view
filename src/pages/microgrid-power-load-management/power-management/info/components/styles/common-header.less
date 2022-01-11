@@ -1,0 +1,33 @@
+.common-header {
+  display: flex;
+  align-items: center;
+  line-height: 48px;
+  border-bottom: 1px solid rgba(5, 10, 25, 0.05);
+  :global {
+    .common-header-icon {
+      display: inline-block;
+      width: 2px;
+      margin-right: 8px;
+      margin-left: 16px;
+      background-color: #3d7eff;
+      height: 12px;
+    }
+    .common-header-label {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .common-header-content {
+      flex-grow: 1 ;
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+:global(.dark-theme) {
+  .common-header {
+    border-bottom: 1px solid #303030;
+  }
+}

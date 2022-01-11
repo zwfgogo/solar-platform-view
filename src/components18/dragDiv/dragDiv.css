@@ -1,0 +1,17 @@
+#drag {
+  width: 700px;
+  height: 500px;
+  background-color: transparent;
+  position: absolute;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 16%);
+}
+#drag .out {
+  position: absolute;
+  z-index: 9;
+  right: 47px;
+  top: 17px;
+  cursor: pointer;
+}
+#drag .y_wrap {
+  height: 100%;
+}

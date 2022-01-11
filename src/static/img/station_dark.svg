@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" viewBox="0 0 13.5 16">
+  <g id="电站图标" transform="translate(-7 -6)">
+    <g id="组_1672" data-name="组 1672" transform="translate(7 6)">
+      <g id="矩形_826" data-name="矩形 826" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+        <rect width="11" height="16" rx="1.5" stroke="none"/>
+        <rect x="0.75" y="0.75" width="9.5" height="14.5" rx="0.75" fill="none"/>
+      </g>
+      <g id="组_1670" data-name="组 1670" transform="translate(2.142 2.675)">
+        <path id="路径_731" data-name="路径 731" d="M2.481,0l2,2L0,3.119Z" transform="translate(5.44 2.701) rotate(150)" fill="#333"/>
+        <path id="路径_732" data-name="路径 732" d="M2.527,0l2,2L0,2.949Z" transform="translate(1.103 3.472) rotate(-30)" fill="#333"/>
+      </g>
+      <g id="组_1671" data-name="组 1671" transform="translate(2.25 10)">
+        <rect id="矩形_827" data-name="矩形 827" width="1.5" height="3" rx="0.3" fill="#333" opacity="0.5"/>
+        <rect id="矩形_828" data-name="矩形 828" width="1.5" height="3" rx="0.3" transform="translate(2.5)" fill="#333" opacity="0.5"/>
+        <rect id="矩形_829" data-name="矩形 829" width="1.5" height="3" rx="0.3" transform="translate(5)" fill="#333" opacity="0.5"/>
+      </g>
+      <rect id="矩形_830" data-name="矩形 830" width="1.5" height="10" rx="0.75" transform="translate(12 3)" fill="#333"/>
+    </g>
+  </g>
+</svg>

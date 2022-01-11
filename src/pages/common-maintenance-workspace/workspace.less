@@ -1,0 +1,59 @@
+
+.workspace-page {
+
+}
+
+.workspace-container {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #fff;
+}
+
+.dark-theme {
+    .workspace-container {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.switch-work-dialog {
+    .input-item {
+        width: calc(50% - 8px);
+        margin-right: 0;
+        &:nth-child(odd) {
+            margin-right: 16px;
+        }
+    }
+    .detail-item {
+        min-height: auto;
+        .item-label {
+            width: 110px;
+            text-align: right;
+        }
+    }
+    .ant-picker {
+        width: 100%;
+    }
+}
+
+.switch-work-detail-dialog {
+    position: relative;
+    .detail-item {
+        min-height: auto;
+
+    }
+
+    .item-label {
+        width: 150px;
+    }
+
+    .station-detail {
+        .detail-item {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .item-label {
+            width: 250px;
+        }
+    }
+}

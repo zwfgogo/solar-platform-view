@@ -1,0 +1,30 @@
+.background {
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('./img/background.png');
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    height: 60px;
+    border-bottom: 1px solid #14354d;
+
+    .time {
+      height: 100%;
+      width: 200px;
+      float: right;
+      color: #fff;
+      text-align: center;
+      opacity: 0.65;
+
+      span {
+        top: 50%;
+        position: relative;
+        display: block;
+        transform: translate(0%, -50%);
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

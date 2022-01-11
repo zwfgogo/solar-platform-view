@@ -1,0 +1,120 @@
+.station-list-page {
+    .look-price {
+        color : #3588fe;
+        cursor: pointer;
+    }
+}
+
+.electrict-detail-dialog {
+    .electric-detail-header {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .electric-detail-header-left {
+        display: flex;
+        align-items: center;
+    }
+    .electric-detail-header-right {
+        display: flex;
+        align-items: center;
+    }
+    .electric-detail-split-line {
+        width: 1px;
+        height: 11px;
+        margin: 0 16px;
+    }
+    .anticon[disabled] {
+        pointer-events: none;
+    }
+    .use-electrity {
+        .section-header {
+            display    : flex;
+            align-items: center;
+        }
+
+        img {
+            width       : 21px;
+            margin-right: 9px;
+        }
+
+        .month {
+            color      : #3588fe;
+            font-weight: bold;
+            margin-top : 16px;
+        }
+
+        .period {
+            display  : flex;
+            flex-wrap: wrap;
+        }
+
+        .period-item {
+            margin-right: 10px;
+        }
+    }
+
+    .generate-electrity {
+        margin-top: 30px;
+
+        .section-header {
+            display    : flex;
+            align-items: center;
+        }
+
+        img {
+            width       : 21px;
+            margin-right: 9px;
+        }
+
+        .rules {
+            display   : flex;
+            margin-top: 20px;
+        }
+
+        .rule {
+            margin-right: 50px;
+        }
+
+        .type-name {
+            color: #3588fe;
+        }
+
+        .price {
+            font-size: 24px;
+        }
+    }
+}
+
+.status {
+    display         : inline-block;
+    background-color: #fff;
+    color           : #fff;
+    text-align      : center;
+    border-radius   : 2px;
+    // padding: 0 6px;
+    cursor          : pointer;
+    width           : 7em;
+
+    &.type1 {
+        background-color: #3a75f8;
+    }
+
+    &.type2 {
+        background-color: #606060;
+    }
+
+    &.type3 {
+        background-color: #ff284b;
+    }
+
+    &.type4 {
+        background-color: #009297;
+    }
+
+    &.type5 {
+        background-color: #ff8328;
+    }
+}

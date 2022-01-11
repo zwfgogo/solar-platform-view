@@ -1,0 +1,27 @@
+.flow-entry-btn {
+  .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+    border-right-color: #165996;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+    border-color: #177ddc;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: #177ddc;
+    background: transparent;
+    border-color: #177ddc;
+  }
+  .ant-radio-button-wrapper:first-child {
+    border-left: 1px solid #434343;
+  }
+  .ant-radio-button-wrapper {
+    color: rgba(255, 255, 255, 0.85);
+    background: transparent;
+    border: 1px solid #434343;
+  }
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    background-color: #434343;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+    background-color: #177ddc;
+  }
+}

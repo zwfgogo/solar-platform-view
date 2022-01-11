@@ -1,0 +1,336 @@
+@import (reference) '../../static/themes/default.less';
+
+.run-strategy-page {
+    .control-modes {
+        .mode {
+            cursor: pointer;
+            outline: none;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            color: #000;
+            padding: 5px 10px;
+
+            &.active {
+                background: #3D7EFF;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.pick-shaving-page {
+    display: flex;
+    flex-direction: column;
+    .ant-tabs-tab {
+        color: @wanke-label-color;
+    }
+
+    .statistic-info {
+        display: inline-block;
+        margin-right: 32px;
+    }
+    .control-argument-tab {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        color: rgba(5, 10, 25, 0.45);
+        &:hover,
+        &.active {
+            background-color: #F5F8FF;
+            color: rgba(5, 10, 25, 0.85);
+        }
+    }
+
+    .curve-date-range {
+        padding: 5px;
+        text-align: left;
+        margin-left: 11px;
+    }
+
+    .command-status {}
+
+    .argument-item {
+        margin-top: 10px;
+        border: 1px solid #ddd;
+
+        .month-day {
+            // height: 100%;
+            width: 160px;
+            position: relative;
+            margin-right: 5px;
+            padding: 5px 5px;
+            border-radius: 3px;
+            background: #f6f6f6;
+            font-size: 14px;
+        }
+
+        .remove-month-day {
+            position: absolute;
+            top: 4px;
+            right: 2px;
+        }
+    }
+
+    .argument-item-table-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 16px 16px;
+        > header {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        > footer {
+            flex-grow: 1;
+            position: relative;
+        }
+    }
+
+    .argument-header {
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        // background: #eee;
+        padding: 10px 16px;
+        border-radius: 3px;
+        border-bottom: 1px solid @cardBorderColor;
+        margin-bottom: 16px;
+    }
+    .argument-header-title {
+        font-size: 20px;
+        flex-shrink: 0;
+        position: relative;
+        padding-right: 16px;
+        &::after {
+            content: ' ';
+            position: absolute;
+            width: 1px;
+            height: 16px;
+            background-color: @cardBorderColor;
+            top: 10px;
+            right: 0;
+        }
+    }
+    .argument-header-range {
+        flex-grow: 1;
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 16px;
+        .ant-form-item-label {
+        }
+        .ant-form-item-label > label {
+            font-size: 16px;
+            color: @wanke-label-color;
+        }
+        &.edit {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -2.5px;
+            & > * {
+                margin-top: 2.5px;
+                margin-bottom: 2.5px;
+            }
+        }
+    }
+}
+
+.current-control-argument-tab {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    & > header {
+        flex-shrink: 0;
+        padding: 0 16px;
+    }
+    & > .current-card {
+        flex-grow: 1;
+        position: relative;
+    }
+    .current-card-absolute-div {
+        display: flex;
+        flex-direction: column;
+        .box-header {
+            flex-shrink: 0;
+        }
+    }
+}
+
+.strategy-curve-tab {
+    padding: 0 15px 15px 15px;
+    border-radius: 3px;
+}
+
+.temporary-strategy-row {
+    color: darken(#b4dbff, 30%);
+}
+
+.temporary-strategy-item {
+    margin-left: 4px;
+    border: 1px solid darken(#b4dbff, 30%);
+    color: darken(#b4dbff, 30%);
+    border-radius: 3px;
+    padding: 0 4px;
+}
+
+.temp-strategy-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .command-status {
+        border-radius: 4px;
+        display: inline-block;
+        padding: 3px 7px;
+        line-height: 1;
+    }
+
+    .status-0 {
+        border: 1px solid #aaa;
+        color: #aaa;
+    }
+
+    .status-1 {
+        border: 1px solid greenyellow;
+        color: greenyellow;
+    }
+
+    .status-2 {
+        border: 1px solid cornflowerblue;
+        color: cornflowerblue;
+    }
+
+    .status-3 {
+        border: 1px solid red;
+        color: red;
+    }
+}
+
+.not-send-argument-tab {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.strategy-status {
+    &.wait {
+    }
+    &.stopped {
+    }
+    &.started {
+        color: rgba(82,196,26,1);
+    }
+    &.executing {
+        color: rgba(250,173,20,1);
+    }
+}
+
+.not-send-strategy-add-btn {
+    width: 100%;
+    border: 1px dashed @cardBorderColor;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px 0;
+    color: @wanke-light-font-color;
+    transition: all 0.3s;
+    &:hover {
+        color: @primaryColor;
+        border-color: @primaryColor;
+    }
+}
+.no-data-strategy-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid @cardBorderColor;
+    border-radius: @wanke-border-radius;
+    height: 220px;
+    margin-top: 10px;
+    .strategy-add-btn {
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.dark-theme {
+    @import (reference) '../../static/themes/dark.less';
+    .not-send-strategy-add-btn {
+        border: 1px dashed rgba(255, 255, 255, 0.25);
+        color: rgba(255,255,255,0.65);
+        &:hover {
+            color: @primaryColor;
+            border-color: @primaryColor;
+        }
+    }
+    .no-data-strategy-body {
+        border: 1px dashed rgba(255, 255, 255, 0.25);
+    }
+    .pick-shaving-page {
+        .ant-tabs-tab {
+            color: rgba(255,255,255,0.45);
+        }
+    }
+    .temporary-strategy-row {
+        color: #b4dbff;
+    }
+
+    .temporary-strategy-item {
+        border: 1px solid #b4dbff;
+        color: #b4dbff;
+    }
+
+    .pick-shaving-page {
+        .argument-item {
+            border: 1px solid #2d2d2d;
+
+            .month-day {
+                background: #333;
+            }
+        }
+
+        .argument-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            // background: darken(#101523, 2%);
+        }
+        
+        .argument-header-title::after {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .argument-header-range {
+            .ant-form-item-label > label {
+                color: rgba(255,255,255,0.45);
+            }
+        }
+    }
+
+    .pick-shaving-page {
+        .control-argument-tab {
+            color: rgba(255, 255, 255, 0.45);
+            &:hover,
+            &.active {
+                background-color: rgba(61, 126, 255, 0.2);
+                color: rgba(255, 255, 255, 0.85);
+            }
+        }
+    }
+}
+
+.control-command-dialog.form-item-format {
+    .input-item {
+        margin-right: 16px;
+    }
+}

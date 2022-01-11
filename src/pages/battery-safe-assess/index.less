@@ -1,0 +1,56 @@
+.page-header{
+  margin: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  &::before{
+    display: inline-block;
+    background-color: #3D7EFF;
+    content: '';
+    width: 2px;
+    height: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+.page-body{
+  margin: 16px;
+  margin-bottom: 0;
+  height: calc(100% - 80px);
+  &-header{
+    margin-left: 16px;
+    .label{
+      margin-right: 8px;
+      &:after{
+        display: inline-block;
+        content: ':';
+      }
+    }
+  }
+
+  .page-table-box{
+    margin-top: 16px;
+    height: calc(100% - 38px);
+
+    .safeAssess-table-icon{
+      &::before{
+        content: '';
+        width: 3px;
+        height: 9px;
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        left: 9px;
+        z-index: -1;
+      }
+    }
+
+    .safeAssess-table-icon-hidden{
+      &::before{
+        display: none;
+      }
+    }
+  }
+}

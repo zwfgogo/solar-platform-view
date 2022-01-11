@@ -1,0 +1,111 @@
+@import (reference) "../../../../../static/common.less";
+@import (reference) "./map-info-aside.less";
+
+.power-station-card {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 0px #b5b5be;
+  border: solid 1px #d5d5dc;
+  padding: 5%;
+}
+
+:global(*[class^='page']) .power-station-card :global(*[class^='header']) {
+  border-bottom: none !important;
+}
+
+.header {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  .station-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 16px;
+    margin-top: 20px;
+    span:first-child {
+      font-size: 16px;
+      color: #171725;
+      flex-grow: 1;
+      margin-right: 5px;
+      .ellipsis();
+    }
+    span:last-child {
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .StationStatusColor();
+  }
+  .station-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 16px;
+    font-size: 12px;
+    color: #92929d;
+    margin-top: 10px;
+    > span:first-child {
+      flex-grow: 1;
+      margin-right: 5px;
+      .ellipsis();
+    }
+    > span:last-child {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.footer {
+  flex-grow: 1;
+  padding-top: 20px;
+}
+
+.card-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #171725;
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+  .label {
+    flex-shrink: 0;
+    padding-right: 1em;
+    .icon {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+  }
+  .content {
+    flex-grow: 1;
+    text-align: right;
+    .ellipsis();
+  }
+}
+
+:global(.dark-theme) {
+  .power-station-card {
+    background-color: #141414;
+    border: solid 1px #2d2d2d;
+    box-shadow: 0 3px 6px 0 #2d2d2d;
+  }
+  .card-line {
+    color: #fff;
+  }
+  .header{
+    .station-title{
+      span:first-child{
+        color: #fff;
+      }
+    }
+  }
+}

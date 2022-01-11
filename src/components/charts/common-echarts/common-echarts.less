@@ -1,0 +1,28 @@
+.common-echart,
+.chart-body {
+  width: 100%;
+  height: 100%;
+}
+
+.common-echart {
+  position: absolute;
+}
+
+.common-echart-empty {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 34px);
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+:global(.dark-theme) {
+  .common-echart-empty {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

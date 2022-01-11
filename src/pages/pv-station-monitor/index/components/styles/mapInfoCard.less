@@ -1,0 +1,127 @@
+@import (reference) "../../../../../static/common.less";
+@import (reference) "./powerStationCard.less";
+
+@BorderRadius: 10px;
+@ColorBlue: #3d7eff;
+@ColorGrey: #dedede;
+@BorderStyle: 1px solid @ColorGrey;
+
+.map-info-card {
+  width: 370px;
+  overflow: hidden;
+  border-radius: @BorderRadius;
+  .header {
+    height: 120px;
+    overflow: hidden;
+    .image {
+      width: 100%;
+      // height: 100%;
+      display: block;
+      border-radius: @BorderRadius @BorderRadius 0 0;
+    }
+  }
+  .footer {
+    background-color: #ffffff;
+  }
+  :global{
+    .full-loading {
+      border-radius: 10px;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  border-bottom: @BorderStyle;
+  .title {
+    padding: 14px 0 14px 10px;
+    flex-grow: 1;
+    overflow: hidden;
+    .label {
+      margin: 0;
+      font-weight: bold;
+      font-size: 18px;
+      color: @ColorBlue;
+      cursor: pointer;
+      .ellipsis();
+    }
+    .desc {
+      margin: 0;
+      font-size: 14px;
+      color: #666666;
+    }
+  }
+  .status {
+    flex-shrink: 0;
+    color: @ColorBlue;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-left: @BorderStyle;
+  }
+}
+
+.data {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: @BorderStyle;
+}
+
+.abnormal {
+  padding: 10px;
+  color: #666666;
+  .number {
+    color: #e70d0d;
+  }
+}
+
+.card-data-block {
+  flex-shrink: 0;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .content {
+    margin: 0;
+    color: #333333;
+  }
+  .label {
+    margin: 0;
+    color: #666666;
+  }
+  &:not(:last-child)::after {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background-color: @ColorGrey;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
+
+.color-green {
+  color: #00b28a;
+}
+.color-grey {
+  color: #606060;
+}
+.color-orange {
+  color: #ff8328;
+}
+.color-blue {
+  color: #3d7eff;
+}
+.color-red {
+  color: #ff284b;
+}
+
+:global(.dark-theme) {
+  .map-info-card {
+    .footer {
+      background-color: rgba(255,255,255,0.05);
+    }
+  }
+}

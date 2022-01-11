@@ -1,0 +1,37 @@
+.userModal {
+
+  .ant-form-vertical,
+  .ant-form-item-control {
+    // line-height: 40px;
+  }
+
+  .ant-row {
+    .ant-col:nth-child(odd) {
+      .ant-form-item-label label {
+        min-width: 45px;
+        justify-content: flex-end;
+      }
+    }
+
+    .ant-col:nth-child(even) {
+      .ant-form-item-label label {
+        min-width: 75px;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+}
+
+.en {
+  .userModal {
+    .ant-row {
+      .ant-col:nth-child(even) {
+        .ant-form-item-label label {
+          min-width: unset;
+          justify-content: unset;
+        }
+      }
+    }
+  }
+}

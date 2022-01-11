@@ -1,0 +1,29 @@
+.common-title {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: 48px;
+  background: #fafafb;
+  border-bottom: 1px solid #f1f1f5;
+  .icon {
+    display: inline-block;
+    width: 2px;
+    height: 32px;
+    margin-right: 12px;
+    background-color: #3d7eff;
+  }
+  .label {
+    font-size: 16px;
+    color: #171725;
+  }
+}
+
+:global(.dark-theme) {
+  .common-title {
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid #2d2d2d;
+  }
+  .label {
+    color: #fff;
+  }
+}

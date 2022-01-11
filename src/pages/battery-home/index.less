@@ -1,0 +1,448 @@
+.battery-home-page-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  .battery-point-waves-box{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: calc(100% - 33px);
+    background: url('../../static/img/battery-home/batteryBg.png') center center no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .battery-icon{
+      width: 476px;
+      height: 100%;
+      background: url('../../static/img/battery-home/battery.png') center 26px no-repeat;
+      background-size: 89% 425px;
+      animation: flashLight 4s infinite;
+    }
+  }
+
+  .home-card-title {
+    font-size: 20px;
+    display: inline;
+
+    span {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.45);
+      margin-left: 16px;
+    }
+  }
+
+  .home-card-sub-title {
+    display: flex;
+    align-items: baseline;
+    margin-top: 8px;
+    line-height: 1;
+
+    .sub-label {
+      display: inline-block;
+      margin-right: 8px;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 14px;
+    }
+
+    .sub-value {
+      display: inline-block;
+      padding: 8px;
+      font-size: 28px;
+      margin-right: 24px;
+      border-radius: 2px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .sub-soc-icon {
+    width: 99px;
+    height: 124px;
+    background: url('../../static/img/battery-home/soc-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 9px;
+    top: 5px
+  }
+
+  .sub-batteryMileage-icon {
+    width: 89px;
+    height: 74px;
+    background: url('../../static/img/battery-home/batteryMileage-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 9px;
+    top: 24px
+  }
+
+  .sub-batteryEfficiency-icon {
+    width: 107px;
+    height: 115px;
+    background: url('../../static/img/battery-home/batteryEfficiency-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 9px;
+    top: 5px
+  }
+
+  .sub-cycleLife-icon {
+    width: 99px;
+    height: 124px;
+    background: url('../../static/img/battery-home/cycleLife-icon.png') center center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 9px;
+    top: 5px
+  }
+
+  .home-alarm-card-title {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 28px;
+  }
+
+  .home-alarm-card-body {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+
+    .home-alarm-card-sub-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .charts-box {
+    width: 100%;
+    height: calc(100% - 85px);
+  }
+
+  .battery-middle-socket-box {
+    display: flex;
+    max-width: calc(100% - 936px);
+    width: calc(41.6% - 32px);
+    position: absolute;
+    top: -6px;
+
+    .battery-middle-socket-item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 8px;
+      height: 80px;
+      background: url('../../static/img/battery-home/numberbg.png') center -16px no-repeat;
+      background-size: 137% 157%;
+      flex-direction: column;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      .battery-middle-socket-value {
+        font-size: 28px;
+
+        span {
+          font-size: 16px;
+        }
+      }
+
+      .battery-middle-socket-label {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.65)
+      }
+    }
+  }
+
+  .battery-middle-btn {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    background: url('../../static/img/battery-home/btnbg.png') center -17px no-repeat;
+    background-size: 154% 230%;
+    position: absolute;
+    bottom: 360px;
+    left: calc(50% - 60px);
+    text-align: center;
+    line-height: 3.4;
+    transition: all .5s;
+
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+}
+
+.real-page {
+  .ant-tabs {
+    height: 100%;
+
+    .ant-tabs-nav {
+      &::before {
+        border-bottom: 1px solid #010615;
+      }
+
+      .ant-tabs-tab-btn {
+        font-size: 14px;
+      }
+
+      .ant-tabs-ink-bar-animated {
+        height: 2px;
+      }
+    }
+
+    .ant-tabs-content {
+      height: 100%;
+    }
+  }
+
+  .battery-charts-body {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0px 16px;
+
+    .battery-charts-window {
+      width: 100%;
+      height: calc(100% - 160px);
+      position: relative;
+
+      .point_tooltip_box {
+        display: flex;
+        transition: all .5s;
+
+        .point_tooltip {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+          flex-direction: row;
+
+          div {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+
+        &_hidden {
+          opacity: 0;
+        }
+      }
+    }
+
+    .battery-charts-list {
+      flex-shrink: 0;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      margin-top: 10px;
+
+      .sub_charts_box {
+        flex: 1;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+
+        .my_charts {
+          height: 100%;
+        }
+
+        canvas {
+          width: 100%!important;
+          height: 100%!important;
+        }
+      }
+
+      .battery_page_btn {
+        position: absolute;
+        width: 30px;
+        height: 142px;
+        align-items: center;
+        justify-content: center;
+        background-color: #0b1026;
+        color: rgba(255, 255, 255, 0.25);
+        font-size: 30px;
+        display: none;
+      }
+
+      &:hover {
+        .battery_page_btn {
+          display: flex !important;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .sub_charts_box{
+      margin-right: 8px;
+      &:last-of-type{
+        margin-right: 0px;
+      }
+    }
+  }
+
+  .workingBox {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0px 8px;
+
+    .card-box {
+      height: 260px;
+      display: inline-block;
+      width: calc(25% - 16px);
+      background: rgba(255, 255, 255, 0.02);
+      margin: 0px 8px 16px;
+      padding: 16px;
+      border-radius: 4px;
+      position: relative;
+
+      .card-title {
+        letter-spacing: 0.28px;
+        font-size: 14px;
+      }
+
+      .card-sub-context {
+        margin-top: 16px;
+
+        .card-sub-item {
+          font-size: 12px;
+          border: 1px solid #3267d0;
+          background: rgba(0, 100, 255, 0.15);
+          border-radius: 10px;
+          display: inline-block;
+          padding: 0px 8px;
+        }
+      }
+
+      .card-iconBox {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.45);
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        align-items: center;
+        justify-content: center;
+
+        // &::before {
+        //   content: '';
+        //   display: inline-block;
+        //   background: url('../../static/img/battery-home/tIcon.svg') center -6px no-repeat;
+        //   width: 38px;
+        //   height: 38px;
+        //   background-size: 120% 120%;
+        // }
+      }
+
+      .card-context-box {
+        height: calc(100% - 60px);
+        width: 100%;
+        padding-top: 16px;
+        display: flex;
+        .card-context {
+          width: calc(50% - 8px);
+          height: 100%;
+          border-radius: 4px;
+          background-color: rgba(255, 255, 255, 0.05);
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          .card-context-item {
+            font-size: 12px;
+            line-height: 3.2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 78%;
+            .card-label {
+              display: inline-block;
+              margin-right: 8px;
+
+              &::after {
+                content: ':';
+                display: inline;
+              }
+            }
+
+            .card-value {
+              display: inline-block;
+            }
+          }
+
+          .card-context-icon {
+            &::before {
+              width: 4px;
+              height: 4px;
+              content: '';
+              display: inline-block;
+              border-radius: 50%;
+              background-color: #62d46e;
+              margin-right: 8px;
+              vertical-align: middle;
+            }
+          }
+          .card-context-icon-first{
+            &::before {
+              width: 4px;
+              height: 4px;
+              content: '';
+              display: inline-block;
+              border-radius: 50%;
+              background-color: #e0252f;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@keyframes flashLight{
+  0%{
+    filter: brightness(0.8);
+  }
+  25%{
+    filter: brightness(1);
+  }
+  50%{
+    filter: brightness(1.3);
+  }
+  75%{
+    filter: brightness(1);
+  }
+  100%{
+    filter: brightness(0.8);
+  }
+}

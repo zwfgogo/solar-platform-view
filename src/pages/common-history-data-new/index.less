@@ -1,0 +1,174 @@
+.page-sub-left {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-right: 16px !important;
+  .dragBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    cursor: col-resize;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: rgba(5, 10, 25, 0.02);
+  }
+}
+
+.data-type-list{
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  z-index: 100;
+  padding-left: 20px;
+  padding-top: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  overflow-y: auto;
+  .ant-checkbox-group{
+    .ant-checkbox-group-item{
+      display: block;
+      margin-bottom: 6px;
+      white-space:nowrap;/* 规定文本是否折行 */  
+      overflow: hidden;/* 规定超出内容宽度的元素隐藏 */
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.form-filter{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.history-query-chart{
+  .wanke-chart-labels{
+    padding-left: 100px;
+  }
+}
+
+
+.page-no-padding {
+  padding: 0 !important;
+
+  .table-header {
+    padding: 0px 16px;
+    height: 50px;
+    border-bottom: 1px solid rgba(5, 10, 25, 0.1);
+    display: flex;
+    align-items: center;
+
+    .table-title {
+      font-size: 16px;
+      color: rgba(5,10,25,0.85);
+      line-height: 24px;
+      font-weight: 500;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 2px;
+        height: 12px;
+        background: #3D7EFF;
+        border-radius: 1px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .table-box {
+    padding: 16px;
+  }
+}
+
+.dark-theme {
+  .page-sub-left {
+    .dragBox {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+  }
+
+  .page-no-padding {
+    .table-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      .table-title{
+        color: rgba(255, 255, 255, 0.85)
+      }
+    }
+  }
+}
+
+.page-sub-right{
+  transition: max-height .5s;
+  .page-sub-right-header{
+
+  }
+  .page-sub-right-body{
+    display: flex;
+    height: calc(100% - 36px);
+    .checkbox-box{
+      flex: 1;
+      padding: 16px 0px 0px 0px;
+      .ant-checkbox-group-item{
+        margin-right: 16px;
+        margin-bottom: 13px;
+        display: inline-flex;
+        align-items: center;
+        .ant-checkbox{
+          top: auto;
+        }
+        .checkbox-title{
+          display: block;
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .ant-spin {
+        width: 100%;
+        height: calc(100% - 16px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 16px;
+      }
+
+      .checkbox-terminalTitle-box{
+        display: flex;
+        align-items: flex-start;
+        padding: 16px 16px 0px 16px;
+        &:last-of-type{
+          border-bottom: none;
+        }
+        .checkbox-terminalTitle{
+          margin-right: 24px;
+          &::after{
+            content: ':';
+            display: inline-block;
+          }
+        }
+
+        .checkbox-item-box{
+          flex: 1;
+          .ant-checkbox-wrapper{
+            margin: 0px 30px 10px 0px;
+          }
+        }
+
+        .page-more-text{
+          cursor: pointer;
+        }
+      }
+    }
+  
+    .page-more{
+      width: 85px;
+      padding: 16px;
+      text-align: right;
+      .page-more-text{
+        cursor: pointer;
+      }
+    }
+  }
+}

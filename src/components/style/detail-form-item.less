@@ -1,0 +1,23 @@
+@import (reference) '../../static/themes/default.less';
+.detail-form-item {
+  display: flex;
+  margin-bottom: 16px;
+  &.no-margin {
+    margin-bottom: 0;
+  }
+  .detail-form-item-label {
+    flex-shrink: 0;
+    color: @wanke-label-color;
+    margin-right: 8px;
+  }
+  .detail-form-item-value {
+    flex-grow: 1;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .detail-form-item-label {
+    color: @wanke-label-color;
+  }
+}

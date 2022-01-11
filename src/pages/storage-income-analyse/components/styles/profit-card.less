@@ -1,0 +1,98 @@
+@import (reference) '../../../../static/themes/default.less';
+.income-analyse-profit-card {
+  border: 1px dashed @wanke-border-light-color;
+  border-radius: @wanke-border-radius;
+  position: relative;
+  height: 112px;
+  flex-basis: 0%;
+  flex-grow: 1;
+  display: flex;
+  &:not(:last-of-type) {
+    margin-right: 16px;
+  }
+  .income-analyse-profit-card-left {
+    flex-basis: 0%;
+    flex-grow: 1;
+    padding: 21px 0 0 24px;
+    .profit-card-title {
+      font-size: 16px;
+    }
+    .profit-card-value {
+      font-size: 30px;
+      color: @wanke-blue;
+      font-weight: 500;
+    }
+    .profit-card-unit {
+      font-size: 16px;
+      color: @wanke-label-color;
+      margin-left: 8px;
+    }
+  }
+  .income-analyse-profit-card-right {
+    flex-basis: 0%;
+    flex-grow: 1;
+    padding: 15px 0 0 24px;
+    .profit-card-label {
+      color: @wanke-label-color;
+      display: inline-block;
+      width: 5em;
+    }
+    .profit-card-value {
+      color: @wanke-light-font-color;
+      font-size: 20px;
+      &.profit-red {
+        color: rgba(245,34,45,0.85);
+      }
+    }
+    .profit-card-unit {
+      color: @wanke-label-color;
+      margin-left: 8px;
+    }
+  }
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    border-right: 1px dashed @cardBorderColor;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.en {
+  .profit-card-label {
+    width: 5.5em!important;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../../../static/themes/dark.less';
+  .income-analyse-profit-card {
+    border: 1px dashed @wanke-border-light-color;
+    &::after {
+      border-right: 1px dashed @cardBorderColor;
+    }
+    .income-analyse-profit-card-left {
+      .profit-card-value {
+        color: @wanke-blue;
+      }
+      .profit-card-unit {
+        color: @wanke-label-color;
+      }
+    }
+    .income-analyse-profit-card-right {
+      .profit-card-label {
+        color: @wanke-label-color;
+      }
+      .profit-card-value {
+        color: @wanke-light-font-color;
+      }
+      .profit-card-unit {
+        color: @wanke-label-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+
+.month-container {
+    background: #fff;
+    border-radius: 5px;
+    width: 250px;
+
+    .month-item {
+        padding: 3px 10px;
+        border-radius: 5px;
+        width: 50px;
+        color: #000;
+        cursor: pointer;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        word-break: keep-all;
+
+        &.selected {
+            background: #3588fe;
+            color: #fff;
+        }
+    }
+
+    .month-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .select-footer {
+        padding: 10px;
+        border-top: 1px solid #efefef;
+        text-align: right;
+    }
+
+    .confirm {
+        outline: none;
+        padding: 5px 10px;
+        background: transparent;
+        border: 1px solid #efefef;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+.dark-theme {
+    .month-container {
+        background: #1f1f1f;
+
+        .month-item {
+            color: #fff;
+        }
+    }
+
+    .select-footer {
+        border-top: 1px solid #2d2d2d;
+    }
+}

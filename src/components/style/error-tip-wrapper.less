@@ -1,0 +1,21 @@
+.error-tip-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .tip-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    color: red;
+    cursor: context-menu;
+    transform: translateY(-50%);
+    z-index: 99;
+  }
+
+  &.error {
+    :global(.ant-input) {
+      padding-right: 35px;
+    }
+  }
+}

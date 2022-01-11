@@ -1,0 +1,187 @@
+.battery-detail {
+  user-select: none;
+
+  .page-sub-left {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+  }
+
+  .page-no-padding {
+    padding: 0 !important;
+
+    .table-header {
+      padding: 0px 16px;
+      height: 50px;
+      border-bottom: 1px solid rgba(5, 10, 25, 0.1);
+      display: flex;
+      align-items: center;
+
+      .table-title {
+        font-size: 16px;
+        color: rgba(5, 10, 25, 0.85);
+        line-height: 24px;
+        font-weight: 500;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 2px;
+          height: 12px;
+          background: #3D7EFF;
+          border-radius: 1px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .table-box {
+      padding: 16px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.45);
+    position: relative;
+
+    .right-top {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 16px 8px 16px;
+      background-color: #fff;
+      border-radius: 4px;
+
+      .right-top-bottom {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .right-bottom {
+      background-color: #fff;
+      padding: 16px 16px 0px 16px;
+      
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+
+      .right-bottom-top {
+        height: 90%;
+        overflow: auto;
+
+        .singleDiv {
+          width: 214px;
+          height: 68px;
+          float: left;
+          margin-left: 16px;
+          background: rgba(255, 255, 255, 0.02);
+          margin-bottom: 16px;
+          color: rgba(255, 255, 255, 0.85);
+
+          .singleDivTitle {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+            display: inline-block;
+            width: 80px;
+          }
+
+          span {
+            line-height: 68px;
+          }
+        }
+      }
+
+      .right-bottom-bottom {
+        height: 10%;
+      }
+    }
+  }
+
+  .ant-tag {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 4px 10px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .ant-pagination {
+    float: right;
+    top: 20px;
+    position: relative;
+  }
+}
+
+.dark-theme {
+  .page-sub-left {
+    .dragBox {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+  }
+
+  .page-no-padding {
+    .table-header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      .table-title {
+        color: rgba(255, 255, 255, 0.85)
+      }
+    }
+  }
+
+  .right {
+    color: rgba(255, 255, 255, 0.45);
+
+    .right-top {
+      background-color: rgba(255, 255, 255, 0.05);
+
+      .right-top-top {
+        border-bottom: 1px solid #1e2230;
+        margin-bottom: 2px;
+      }
+
+      .checkLabel {
+        color: rgba(255, 255, 255, 0.65);
+
+        .checkBoxDiv {
+          background: rgba(255, 255, 255, 0.2);
+          color: rgba(255, 255, 255, 0.45);
+        }
+
+        .ant-tag-checkable {
+          border: 1px solid transparent;
+        }
+
+        .ant-tag-checkable-checked {
+          background: rgba(61, 126, 255, 0.2);
+          border: 1px solid rgba(61, 126, 255, 0.8);
+          color: rgba(61, 126, 255, 1);
+        }
+      }
+    }
+
+    .right-bottom {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  .ant-tag {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .checkBoxDiv {
+    width: 31px;
+    height: 16px;
+    border-radius: 2px;
+    font-size: 12px;
+    margin-right: 16px;
+    padding: 1px 4px;
+  }
+}

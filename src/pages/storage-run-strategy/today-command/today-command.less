@@ -1,0 +1,37 @@
+@import (reference) '../../../static/themes/default.less';
+
+.c07-command-dialog {
+  .content {
+    min-height: 200px;
+    max-height: 60vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    .body {
+      padding: 16px;
+    }
+  }
+  .command-card {
+    border: 1px solid @cardBorderColor;
+    border-radius: 4px;
+    padding-top: 16px;
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+  .label {
+    margin-right: 8px;
+    color: @wanke-label-color;
+  }
+}
+
+
+:global(.dark-theme) {
+  @import (reference) '../../../static/themes/dark.less';
+  .command-card {
+    border: 1px solid @cardBorderColor;
+  }
+  .label {
+    color: @wanke-label-color;
+  }
+}

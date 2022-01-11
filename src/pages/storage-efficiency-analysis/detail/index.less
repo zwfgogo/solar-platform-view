@@ -1,0 +1,79 @@
+@import (reference) '../../../static/themes/default.less';
+.report-charge-discharge-detail {
+  height: 100%;
+  background-color: @wanke-card-bg-color;
+
+  .report-charge-header {
+    margin-top: 20px;
+
+    button {
+      float: right;
+    }
+  }
+
+  .report-all {
+    height: 100%;
+    overflow: auto;
+    max-height: calc(100% - 80px);
+
+    .report-accum {
+      height: 40px;
+      width: 100%;
+      padding: 0 20px;
+      margin-bottom: 20px;
+
+      div {
+        background-color: @wanke-card-title-bg;
+        height: 100%;
+        width: 100%;
+
+        span {
+          height: 100%;
+          margin-left: 20px;
+          line-height: 40px;
+          color: #ff994a;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .report-echart {
+      height: 400px;
+      margin-bottom: 20px;
+    }
+
+    .detail-body {
+      // height: calc(100% - 32px);
+      padding: 0 20px;
+
+      .table-click-text {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .ant-table-body {
+        overflow-y: auto !important;
+      }
+    }
+  }
+
+  .report-charge-info-header {
+    padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 55px;
+  }
+}
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .report-charge-discharge-detail {
+    background-color: @wanke-card-bg-color;
+  }
+  .report-all {
+    .report-accum {
+      div {
+        background-color: @wanke-card-title-bg;
+      }
+    }
+  }
+}

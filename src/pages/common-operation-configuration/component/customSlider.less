@@ -1,0 +1,108 @@
+.customSlider-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  .customSlider-line {
+    flex: 1;
+    border-radius: 4px;
+    height: 8px;
+    background-color: #3D7EFF;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .customSlider-line-no{
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .customSlider-left {
+    margin-right: 8px;
+  }
+
+  .customSlider-right {
+    margin-left: 8px;
+  }
+
+  .customSlider-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}
+
+.customSlider-tooltips{
+  .ant-tooltip-content{
+    width: 260px;
+    .ant-tooltip-inner{
+      padding: 10px 16px;
+    }
+
+    .customSlider-tooltips-header{
+      line-height: 1;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.light-theme {
+  .customSlider-box {
+
+    .customSlider-left,
+    .customSlider-right {
+      color: rgba(5, 10, 25, 0.45);
+    }
+
+    .customSlider-point {
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 10px 20px 0 rgba(5, 10, 25, 0.10), 0 0 4px 0 rgba(5, 10, 25, 0.30);
+    }
+  }
+
+  .customSlider-tooltips{
+    .ant-tooltip-content{
+      .ant-tooltip-inner{
+        background-color: #fff;
+        color: rgba(5,10,25,0.85);
+      }
+    }
+    .ant-tooltip-arrow-content{
+      background-color: #fff;
+    }
+  }
+}
+
+
+.dark-theme {
+  .customSlider-box {
+
+    .customSlider-left,
+    .customSlider-right {
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    .customSlider-point {
+      border: 2px solid rgba(5, 10, 25, 0.85);
+      box-shadow: 0 10px 20px 0 rgba(255, 255, 255, 0.10), 0 0 4px 0 rgba(255, 255, 255, 0.30);
+    }
+  }
+
+  .customSlider-tooltips{
+    .ant-tooltip-content{
+      .ant-tooltip-inner{
+        background-color: rgba(5,10,25,1);
+        color: rgba(255,255,255,0.85);
+      }
+    }
+    .ant-tooltip-arrow-content{
+      background-color: rgba(5,10,25,1);;
+    }
+  }
+}

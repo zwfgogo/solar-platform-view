@@ -1,0 +1,66 @@
+.edit-tag-box{
+
+  .edit-tag-item-box{
+    display: inline-block;
+    margin: 3px 5px;
+    .anticon{
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+  }
+
+  .edit-tag-add-btn{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+    .anticon{
+      margin: 0px 5px;
+    }
+  }
+}
+
+.edit-tag-popover-title{
+  width: 100%;
+  margin: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-tag-popover-body{
+  overflow: hidden;
+  .edit-tag-popover-subBody{
+    max-width: 200px;
+    max-height: 139px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .ant-checkbox-group{
+    width: 100%;
+    .ant-checkbox-wrapper{
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .ant-col{
+    margin: 5px 0px;
+    .ant-checkbox-wrapper{
+      span:last-of-type{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .edit-tag-popover-footer{
+    text-align: right;
+    margin-top: 8px;
+    cursor: pointer;
+    &-title{
+      text-decoration: underline;
+    }
+  }
+}

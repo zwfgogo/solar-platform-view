@@ -1,0 +1,23 @@
+.station-detail-title {
+  position: relative;
+  color: #333333;
+  font-weight: bold;
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 13px;
+    margin-right: 8px;
+    background-color: #3d7eff;
+  }
+}
+
+:global(.dark-theme) {
+  .station-detail-title {
+    color: #fff;
+  }
+}

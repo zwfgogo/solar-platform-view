@@ -1,0 +1,28 @@
+.virtual-table {
+  :global{
+    .ant-table-container {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    .virtual-table-cell {
+      box-sizing: border-box;
+      padding: 6px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      background: #FFF;
+      border-right: 1px solid #f0f0f0;
+    }
+    .virtual-table-cell-last {
+      border-right: unset;
+    }
+  }
+  [data-theme="dark"] {
+    .virtual-table-cell {
+      box-sizing: border-box;
+      padding: 6px 16px;
+      border-bottom: 1px solid #303030;
+      background: #141414;
+    }
+  }
+}

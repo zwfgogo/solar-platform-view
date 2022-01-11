@@ -1,0 +1,144 @@
+@import (reference) '../../static/themes/default.less';
+@img-top-margin: 60px;
+@img-bottom-margin: 16px;
+
+.absoluteHorizontalCenter() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loss-view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .loss-view-title {
+    padding: 16px;
+  }
+
+  .loss-view-header,
+  .loss-view-border,
+  .loss-view-bottom,
+  .loss-view-info {
+    .absoluteHorizontalCenter();
+  }
+
+  .loss-view-header {
+    position: absolute;
+    top: @img-top-margin;
+    background-color: #3D7EFF;
+    color: #ffffff;
+    padding: 2px 15px;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+  }
+
+  .loss-view-border {
+    z-index: 20;
+    top: @img-top-margin;
+    height: calc(~'100% - 44px - @{img-top-margin} - @{img-bottom-margin}');
+    width: 240px;
+  }
+  .loss-view-bottom {
+    z-index: 10;
+    bottom: @img-bottom-margin;
+  }
+  .loss-view-info {
+    z-index: 30;
+    top: 40px + @img-top-margin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(~'100% - 80px - @{img-top-margin} - @{img-bottom-margin}')
+  }
+
+  .loss-view-item {
+    flex-shrink: 0;
+    position: relative;
+    img {
+      width: 110px;
+    }
+    .loss-view-item-label {
+      .absoluteHorizontalCenter();
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .loss-view-item-value {
+      position: absolute;
+      border-radius: 50%;
+      background-color: @app-page-bg;
+      border: 2px solid black;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      bottom: 30px;
+      span:first-child {
+        font-size: 12px;
+      }
+      span:last-child {
+        font-size: 12px;
+      }
+    }
+    &.green1 {
+      .loss-view-item-value {
+        color: #42CECE;
+        border-color: #42CECE;
+      }
+    }
+    &.green2 {
+      .loss-view-item-value {
+        color: #2864DC;
+        border-color: #2864DC;
+      }
+    }
+    &.blue1 {
+      .loss-view-item-value {
+        color: #74CF47;
+        border-color: #74CF47;
+      }
+    }
+    &.blue2 {
+      .loss-view-item-value {
+        color: #32C5FF;
+        border-color: #32C5FF;
+      }
+    }
+  }
+
+  .loss-view-arrow {
+    flex-shrink: 1;
+    overflow: hidden;
+    width: 100%;
+    flex-basis: 0%;
+    flex-grow: 1;
+    position: relative;
+    img:first-child {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    img:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .loss-view-item {
+    .loss-view-item-value {
+      background-color: @app-page-bg;
+    }
+  }
+}

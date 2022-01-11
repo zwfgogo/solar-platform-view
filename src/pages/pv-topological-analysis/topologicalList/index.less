@@ -1,0 +1,76 @@
+.detail{
+    height: 25%;
+    width: 100%;
+    span{
+        line-height: 25px;
+    }
+}
+
+.legend-container {
+    flex-grow: 1;
+  }
+  .legend {
+      float: right;
+    font-size: 16px;
+    margin-left: 20px;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    &.disabled {
+      color: #292964;
+      .icon {
+        background-color: #b5b5be!important;
+      }
+    }
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  .label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .value {
+    margin: 0;
+  }
+
+.bottomContent{
+    width: 120px;
+	height: 68px;
+    border-radius: 3px;
+    float: left;
+    margin: 5px;
+    p{
+      margin-bottom: 0;
+    }
+}
+
+.stationInfo {
+    color: #92929d;
+}
+.stationName {
+    border-bottom: 1px solid #f1f1f5;
+    color: #171725;
+}
+.page.page {
+    background-color: #f0f2f5;
+}
+:global(.dark-theme) {
+    .page.page {
+        background-color: #111624;
+    }
+
+    .stationInfo {
+        color: #fff;
+    }
+    .stationName {
+        border-bottom: 1px solid #2d2d2d;
+        color: #fff;
+    }
+}

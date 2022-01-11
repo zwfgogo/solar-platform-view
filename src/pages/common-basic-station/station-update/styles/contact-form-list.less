@@ -1,0 +1,51 @@
+.contact-form-line {
+  position: relative;
+  margin-bottom: 10px;
+  .contact-form-line-left {
+    display: flex;
+  }
+  .contact-form-item {
+    flex-grow: 1;
+  }
+  .contact-form-menu {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    width: 14px;
+  }
+  .icon {
+    font-size: 14px;
+  }
+  .icon-add {
+    position: relative;
+    top: 8px;
+  }
+  .icon-delete {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    transform: translateX(-100%);
+    z-index: 99;
+  }
+  .remind-list {
+    display: flex;
+    align-items: center;
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+  &:first-of-type {
+    .icon-add {
+      top: 46px;
+    }
+    .icon-delete {
+      top: 46px;
+    }
+    .remind-list {
+      padding-top: 38px;
+    }
+  }
+}

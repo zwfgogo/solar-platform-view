@@ -1,0 +1,72 @@
+.report-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    .title {
+        flex-shrink: 0;
+    }
+
+    .content {
+        flex-grow: 1;
+        position: relative;
+        display: flex;
+
+        .left {
+            width: 50%;
+        }
+
+        .right {
+            width: 48%;
+            display: flex;
+            align-items: center;
+            padding: 0 4% 0 6%;
+        }
+
+        .legend-container {
+            flex-grow: 1;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+            user-select: none;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+            &.disabled {
+                color: #b5b5be;
+
+                .icon {
+                    background-color: #b5b5be !important;
+                }
+            }
+        }
+
+        .icon {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 16px;
+        }
+
+        .label {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .value {
+            margin: 0;
+        }
+    }
+}

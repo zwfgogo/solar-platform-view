@@ -1,0 +1,108 @@
+.report-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        flex-shrink: 0;
+    }
+
+    .content {
+        flex-grow: 1;
+        position: relative;
+        display: flex;
+
+        &::after {
+            content: ' ';
+            width: 1px;
+            height: 70px;
+            background: #e2e2ea;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .left {
+            width: 50%;
+            position: relative;
+        }
+
+        .chart-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: pre-wrap;
+            line-height: 1;
+            z-index: 9;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            color: #000000;
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .legend-container {
+            flex-grow: 1;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+            user-select: none;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+            &.disabled {
+                color: #b5b5be;
+
+                .icon {
+                    background-color: #b5b5be !important;
+                }
+            }
+        }
+
+        .icon {
+            width: 21px;
+            height: 16px;
+            display: inline-block;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .label {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .value {
+            margin: 0;
+        }
+    }
+}
+
+:global(.dark-theme) {
+    .report-card {
+        .content {
+            .chart-title {
+                color: #fff;
+            }
+        }
+    }
+}

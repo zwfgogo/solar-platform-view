@@ -1,0 +1,38 @@
+@import (reference) '../../../static/themes/default.less';
+
+.data-item-view-page-start-up(
+  @cardBorderColor,
+  @wanke-border-radius,
+  @tableEvenBg
+) {
+  .data-item-view-page {
+    .data-item-view-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid @cardBorderColor;
+      border-radius: @wanke-border-radius;
+      background-color: @tableEvenBg;
+      padding: 8px 14px;
+      & > div {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.data-item-view-page-start-up(
+  @cardBorderColor,
+  @wanke-border-radius,
+  @tableEvenBg
+);
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .data-item-view-page-start-up(
+    @cardBorderColor,
+    @wanke-border-radius,
+    @tableEvenBg
+  );
+}

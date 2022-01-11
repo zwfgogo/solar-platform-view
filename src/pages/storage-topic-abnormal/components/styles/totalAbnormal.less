@@ -1,0 +1,38 @@
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  border-bottom: 1px solid #f0f2f5;
+  padding: 0 10px;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-items: center;
+  .title {
+    display: flex;
+  }
+}
+
+.footer {
+  flex-grow: 1;
+  position: relative;
+}
+
+.detail-btn {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-left: 9px;
+  cursor: pointer;
+  user-select: none;
+}
+
+:global(.dark-theme) {
+  .header {
+    border-bottom: 1px solid #2d2d2d;
+  }
+}

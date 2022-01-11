@@ -1,0 +1,118 @@
+@import '../../../../static/themes/dark';
+
+@BorderColor: #f0f2f5;
+
+.overview-card {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+
+    .total {
+        width: 59.5%;
+        border-right: 1px solid @BorderColor;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            color: #3d7eff;
+            height: 40%;
+        }
+
+        .number {
+            font-size: 24px;
+            color: #333333;
+            flex-shrink: 0;
+            word-break: break-all;
+            line-height: 1;
+            flex-grow: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #999999;
+            flex-shrink: 0;
+            margin: 10px 0 15px;
+        }
+    }
+
+    .detail {
+        width: 40.5%;
+        height: 100%;
+        list-style: none;
+        padding: 0 10px;
+    }
+
+    .detail-item {
+        height: 33.3%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid @BorderColor;
+        }
+
+        .number {
+            font-size: 14px;
+            color: #333333;
+            word-break: break-all;
+            line-height: 1;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #999999;
+            margin-top: 2px;
+        }
+    }
+
+    .number,
+    .label {
+        margin-bottom: 0;
+    }
+}
+
+:global(.dark-theme) {
+    .overview-card {
+        .total {
+            border-right: 1px solid @borderColor;
+
+            .icon {
+                color: #3d7eff;
+            }
+
+            .number {
+                color: #fff;
+            }
+
+            .label {
+                color: #999999;
+            }
+        }
+
+        .detail-item {
+            &:not(:last-child) {
+                border-bottom: 1px solid @borderColor;
+            }
+
+            .number {
+                color: #fff;
+
+            }
+
+            .label {
+                color: #999999;
+            }
+        }
+    }
+}

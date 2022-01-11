@@ -1,0 +1,78 @@
+.lgc-page {
+  // display: flex;
+  // flex-direction: column;
+  overflow: hidden !important;
+  .lgc-header {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    // flex-shrink: 0;
+    div {
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+
+  .lgc-filter {
+    padding: 10px 20px;
+    display: flex;
+    // flex-shrink: 0;
+    justify-content: space-between;
+  }
+
+  .lgc-charts {
+    height: calc(50% - 46px);
+  }
+
+  .lgc-table {
+    height: calc(50% - 52px);
+    &-header {
+      padding: 0px 20px;
+      height: 32px;
+      display: flex;
+      flex-shrink: 0;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    &-body{
+      height: calc(100% - 90px);
+      padding: 0px 20px;
+      .ant-form-item{
+        margin-bottom: 0;
+      }
+    }
+
+    &-btns{
+      .confirm-btn{
+        cursor: pointer;
+        color: #0062FF;
+      }
+      .cancel-btn{
+        margin-left: 10px;
+        cursor: pointer;
+        color: #828282;
+      }
+    }
+  }
+}
+
+.lgc-modal-box{
+  .ant-form-item-label{
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .ant-form-item-extra{
+    min-height: 0;
+  }
+  .edit-form-extra{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 152px;
+    padding: 4px 0px;
+    width: 60px;
+    text-align: center;
+    border-radius: 3px;
+  }
+}

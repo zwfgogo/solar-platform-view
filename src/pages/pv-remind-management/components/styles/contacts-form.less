@@ -1,0 +1,47 @@
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  header {
+    flex-shrink: 0;
+    & > span:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  footer {
+    flex-grow: 1;
+    overflow: auto;
+    position: relative;
+  }
+}
+
+.contacts-form-item {
+  display: flex;
+  align-items: center;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0 !important;
+      margin-right: 10px;
+    }
+    .ant-form-item-label {
+      padding-bottom: 0 !important;
+    }
+  }
+  .menu-list {
+    & > a:first-child {
+      margin-right: 5px;
+    } 
+  }
+  .color-grey {
+    color: #BDBDBD;
+  }
+  :global {
+    .ant-form-item-explain {
+      display: none;
+    }
+  }
+}
+
+.dark-theme {
+
+}

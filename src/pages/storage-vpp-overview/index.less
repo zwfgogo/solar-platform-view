@@ -1,0 +1,130 @@
+@verticalMargin: 10px;
+@horizontalMargin: 10px;
+@halfHorizontalMargin: @horizontalMargin / 2;
+
+.page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .header,
+  .content {
+    border-radius: 5px;
+    display: flex;
+  }
+  .header {
+    margin-bottom: @verticalMargin;
+    flex-shrink: 0;
+    .card {
+      flex-shrink: 0;
+      &:not(:first-child) {
+        margin-left: @horizontalMargin;
+      }
+    }
+    .card:nth-of-type(1) {
+      width: calc(~"16.5% - @{horizontalMargin}");
+    }
+    .card:nth-of-type(2) {
+      width: calc(~"27% - @{horizontalMargin}");
+    }
+    .card:nth-of-type(3) {
+      width: calc(~"23.5% - @{horizontalMargin}");
+    }
+  }
+  .footer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .content {
+      height: calc(~"50% - @{halfHorizontalMargin}");
+      &:first-child {
+        margin-bottom: @verticalMargin;
+      }
+    }
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 5px;
+  }
+
+  .card-left {
+    width: calc(~"67% - @{horizontalMargin}");
+  }
+
+  .card-right {
+    width: 33%;
+    margin-left: @horizontalMargin;
+  }
+}
+
+.summary-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  &.half-height {
+    height: 50%;
+    &:first-child {
+      padding-bottom: 5px;
+    }
+    &:last-child {
+      padding-top: 5px;
+    }
+  }
+  &.vpp-summary-card {
+    .icon {
+      width: 50%;
+    }
+    .summary-content {
+      width: 50%;
+    }
+  }
+  .icon {
+    flex-shrink: 0;
+    color: #22e5b4;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .summary-content {
+    width: 65%;
+    flex-grow: 1;
+    .label {
+      font-size: 24px;
+      color: #333333;
+    }
+    .unit {
+      font-size: 14px;
+      color: #333333;
+    }
+    .desc {
+      font-size: 14px;
+      color: #999999;
+    }
+  }
+  :global {
+    p {
+      margin: 0;
+    }
+  }
+}
+
+:global(.dark-theme) {
+  .page-container {
+    .card {
+      background: #141414;
+    }
+  }
+  .summary-card {
+    .summary-content {
+      .label, .unit {
+        color: #fff;
+      }
+    }
+  }
+}

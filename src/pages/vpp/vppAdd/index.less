@@ -1,0 +1,102 @@
+.pageVppAdd {
+    background-color: #f0f2f5;
+}
+.strategyContent{
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 5px;
+    float: left;
+    width: 70%;
+    margin-left: 20px;
+    .strategySpan{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .strategySpanBlue{
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #3d7eff;
+    }
+    .strategySpanShu{
+        border-left: 1px solid #dedede;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: white;
+        border-right: 1px solid #dedede;
+        margin-left: 10px;
+    }
+
+}
+.strategyData{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.topLeft{
+    width: 260px;
+    padding: 10px;
+    :global(.title){
+        color:#fff;
+    }
+    :global(.anticon){
+        color:#fff !important;
+    }
+    .strategyTitle{
+        font-size: 18px;
+        color: #ffffff;
+        text-align: center;
+        top: 40px;
+        position: relative;
+    }
+}
+.topRight{
+    width: 80%;
+    height: 100%;
+    .topRightContent{
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        flex-direction: column;
+        .topTitle{
+            height: 30%;
+            width: 100%;
+            span{
+                font-size: 16px;
+            }
+        }
+        .topContent{
+            height: 70%;
+            width: 100%;
+            text-indent:2em
+        }
+    }
+
+}
+:global(.strategyTimeline){
+    :global(.ant-timeline-item-content) {
+        width: 80% !important;
+    }
+    :global(.ant-timeline-item-head-red) {
+        background-color: #f82b28 !important;
+        box-shadow: 0px 0px 5px 1px #f82b28;
+    }
+    :global(.ant-timeline-item-head-yellow) {
+        background-color: #fda607 !important;
+        box-shadow: 0px 0px 5px 1px #fda607;
+        border-color: #fda607 !important;
+    }
+    :global(.ant-timeline-item-head-blue) {
+        background-color: #1890ff !important;
+        box-shadow: 0px 0px 5px 1px #1890ff;
+    }
+    :global(.ant-timeline-item-tail) {
+        height: calc(100% - 25px);
+        top: 17px;
+    }
+}
+
+:global(.dark-theme) {
+    .pageVppAdd {
+        background-color: #000;
+    }
+}

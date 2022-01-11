@@ -1,0 +1,14 @@
+@import (reference) '../../static/themes/default.less';
+.wanke-card-layout {
+  border-radius: @wanke-border-radius;
+  background-color: @wanke-card-bg-color;
+  box-shadow: 0 1px 3px 0 rgb(~"0 0 0 / 16%");
+}
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .wanke-card-layout {
+    border-radius: @wanke-border-radius;
+    background-color: @wanke-card-bg-color;
+  }
+}

@@ -1,0 +1,27 @@
+.body {
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .title {
+    margin-bottom: 10px;
+  }
+  .form-container {
+    overflow-x: hidden;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    &:not(:last-of-type) {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+    }
+    :global {
+      .item-label,
+      .detail-item {
+        width: auto;
+        margin-right: 0;
+      }
+      .ant-col-6 {
+        min-width: 300px;
+      }
+    }
+  }
+}

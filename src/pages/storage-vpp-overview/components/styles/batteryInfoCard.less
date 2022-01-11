@@ -1,0 +1,66 @@
+.battery-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  :global {
+    p {
+      margin: 0;
+    }
+  }
+  .content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .icon {
+    flex-shrink: 0;
+    color: #22e5b4;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-box {
+    flex-grow: 1;
+    .label {
+    }
+    .number {
+      font-size: 24px;
+      color: #333333;
+    }
+    .unit {
+      font-size: 14px;
+      color: #999999;
+    }
+    .desc {
+      font-size: 14px;
+      color: #999999;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .footer {
+    flex-shrink: 0;
+    text-align: right;
+    color: #999999;
+  }
+}
+
+:global(.dark-theme) {
+  .battery-info {
+    .text-box {
+      .number {
+        color: #fff;
+      }
+      .unit {
+        color: #fff;
+      }
+      .desc {
+        color: #fff;
+      }
+    }
+    .footer {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import (reference) '../../../static/themes/default.less';
+.page-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 8px 16px 16px;
+  overflow: hidden;
+  .menu {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+  }
+  :global {
+    .ant-radio-button-wrapper {
+      color: @wanke-primary-grey;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: @primaryColor;
+    }
+  }
+  .header,
+  .footer {
+    height: calc(50% - 8px);
+  }
+  :global {
+    .wanke_selection {
+      width: unset;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  .menu {
+    flex-shrink: 0;
+    display: flex;
+    .label {
+      margin-right: 5px;
+    }
+  }
+  .chart-container {
+    flex-grow: 1;
+  }
+}
+
+:global(.dark-theme) {
+  @import (reference) '../../../static/themes/dark.less';
+  .page-container {
+    background-color: #121625;
+    :global {
+      .ant-radio-button-wrapper {
+        color: @wanke-primary-grey;
+      }
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+        color: @primaryColor;
+      }
+    }
+  }
+}

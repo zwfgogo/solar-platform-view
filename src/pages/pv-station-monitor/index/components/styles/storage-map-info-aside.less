@@ -1,0 +1,207 @@
+@import (reference) '../../../../../static/themes/default.less';
+@import (reference) './map-info-aside.less';
+
+.map-info-aside {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .image-tip {
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0px 20px;
+    transform: rotate(45deg);
+  }
+  .TipStatusColor();
+  :global {
+    .wanke-chart-labels {
+      padding: 0 0 0 60px;
+    }
+  }
+}
+
+.common-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 0;
+  color: #44444f;
+}
+
+.content {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 10px 25px;
+  height: 34px;
+  color: @wanke-light-font-color;
+}
+
+.header {
+  flex-shrink: 0;
+  .station-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    // padding: 0 148px 16px 0;
+    padding: 0 16px 16px 0;
+    position: relative;
+    height: 40px;
+    &::before {
+      content: ' ';
+      position: absolute;
+      left: -16px;
+      top: 5px;
+      width: 2px;
+      height: 12px;
+      background-color: @wanke-blue;
+    }
+    span {
+      font-size: 20px;
+      color: #171725;
+      font-weight: bold;
+    }
+    .offline {
+      color: rgba(5,10,25,0.25);
+      line-height: 24px;
+    }
+    .station-weather {
+      position: absolute;
+      top: -4px;
+      right: 8px;
+      :global {
+        .animation-number-item {
+          vertical-align: sub;
+        }
+        .weather_value {
+          color: @wanke-label-color;
+        }
+      }
+    }
+  }
+  .desc {
+    font-size: 14px;
+    line-height: 14px;
+    color: #92929d;
+    padding: 0 0 12px;
+    min-height: 26px;
+  }
+}
+
+.chart-container {
+  flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  .common-title {
+    flex-shrink: 0;
+  }
+  .chart {
+    min-height: 150px;
+    flex-grow: 1;
+    position: relative;
+  }
+  .chart-click-mash {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 34px);
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
+}
+
+.detail-container {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  .detail-form {
+    width: 100%;
+    border-top: 1px solid @cardBorderColor;
+    border-left: 1px solid @cardBorderColor;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .detail-item {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    width: 50%;
+    height: 36px;
+    flex-shrink: 0;
+    border-right: 1px solid @cardBorderColor;
+    border-bottom: 1px solid @cardBorderColor;
+    :global(.detail-form-item) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid @cardBorderColor;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @app-page-bg;
+  > :global(a) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+:global(.dark-theme) {
+  @import (reference) '../../../../../static/themes/dark.less';
+  .header{
+    .station-title{
+      span:first-child {
+        color: #fff;
+      }
+    }
+  }
+  .common-title {
+    color: #fff;
+  }
+  .content {
+    color: @wanke-light-font-color;
+  }
+  .offline {
+    color: rgba(255,255,255,0.45)!important;
+  }
+  .detail-container {
+    .detail-form {
+      border-top: 1px solid @cardBorderColor;
+      border-left: 1px solid @cardBorderColor;
+    }
+    .detail-item {
+      border-right: 1px solid @cardBorderColor;
+      border-bottom: 1px solid @cardBorderColor;
+    }
+  }
+  .footer {
+    border-top: 1px solid @cardBorderColor;
+    background-color: @app-page-bg;
+  }
+  .station-weather {
+    :global {
+      .weather_value {
+        color: @wanke-label-color !important;
+      }
+    }
+  }
+}

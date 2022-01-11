@@ -1,0 +1,330 @@
+.pageBox {
+  display: flex;
+  flex-direction: column;
+
+  .pageHeader {
+    line-height: 36px;
+    display: flex;
+
+    // position: absolute;
+    &>div {
+      flex: 1;
+      position: fixed;
+      top: 55px;
+    }
+  }
+
+  .pageBody {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .pageBody1 {
+    width: 328px;
+    margin-right: 16px;
+
+    .ant-card-head{
+      line-height: 2.3;
+      padding: 0px 24px !important;
+      border-bottom: none !important;
+      .ant-card-head-title{
+        padding-top: 16px !important;
+        padding-bottom: 4px !important;
+      }
+    }
+    
+
+    .ant-card-body {
+      height: calc(100vh - 189px);
+    }
+
+    .card_box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .sub_card {
+        flex-grow: 1;
+        display: flex;
+        position: relative;
+        margin: 8px 12px;
+        flex-direction: column;
+
+        .charts_box {
+          flex: 1;
+          position: relative;
+
+          &>div {
+            height: 100% !important;
+          }
+
+          .charts_value {
+            position: absolute;
+            top: 40px;
+            left: 27%;
+            width: 46%;
+            height: 65px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            word-break: break-all;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 18px;
+            letter-spacing: 0px;
+            color: #0062ff;
+            font-size: 1vw;
+            // background-color: chartreuse; 
+          }
+        }
+
+        .info_box {
+          height: 72px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+
+          &>div:first-of-type {
+            font-family: PingFang SC;
+            font-size: 16px;
+            font-weight: bold;
+          }
+
+          .info_sub_title {
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+
+        .other_box {
+          position: absolute;
+          top: 0;
+          border-radius: 2px;
+          border: solid 1px #0062ff;
+          font-size: 10px;
+          transform: scale(0.8);
+          padding: 2px 6px;
+          color: #0062ff;
+        }
+
+        &:first-of-type {
+          margin-top: 0px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .wanke_selection {
+      display: inline !important;
+      margin-right: 10px;
+    }
+
+    .info_value {
+      color: #0062ff;
+    }
+  }
+
+  .pageBody2 {
+    flex: 1;
+
+    .ant-card-head{
+      line-height: 2.3;
+      border-bottom: none !important;
+      .ant-card-head-title{
+        padding-top: 16px !important;
+        padding-bottom: 4px !important;
+      }
+    }
+    
+    .ant-card{
+      padding: 0px 12px;
+    }
+
+    .ant-card-body {
+      height: calc(100% - 81px);
+      .ant-tabs {
+        height: 100%;
+
+        .ant-tabs-nav-wrap {
+          height: 27px;
+
+          .ant-tabs-tab {
+            padding: 0px 12px;
+            border-radius: 2px;
+            margin-right: 12px;
+          }
+        }
+
+        .ant-tabs-content {
+          height: 100%;
+
+          .ant-tabs-tabpane {
+            height: 100%;
+            overflow-y: hidden;
+
+            .battery-charts-body {
+              height: 100%;
+              overflow-y: auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap: wrap;
+              flex-direction: row;
+
+              .battery-charts-window {
+                width: 100%;
+                height: calc(100% - 160px);
+                position: relative;
+
+                .point_tooltip_box {
+                  display: flex;
+                  transition: all .5s;
+
+                  .point_tooltip {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 20px;
+                    flex-direction: row;
+                    div {
+                      width: 14px;
+                      height: 14px;
+                      border-radius: 50%;
+                    }
+                    &:last-of-type{
+                      margin-right: 0;
+                    }
+                  }
+
+                  &_hidden {
+                    opacity: 0;
+                  }
+                }
+              }
+
+              .battery-charts-list {
+                flex-shrink: 0;
+                width: 100%;
+                height: 150px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                overflow-y: hidden;
+                overflow-x: auto;
+                margin-top: 10px;
+                position: relative;
+                .battery_page_btn{
+                  position: absolute;
+                  width: 30px;
+                  height: 110px;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: #0b1026;
+                  color: rgba(255,255,255,0.25);
+                  font-size: 30px;
+                  display: none;
+                }
+                &:hover{
+                  .battery_page_btn{
+                    display: flex;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+
+            .battery-charts-footer {
+              height: 45px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              padding: 0px 30px;
+            }
+
+            .my_charts {
+              height: 110px;
+              width: 100%;
+              border: solid 2px #0b1026;
+              border-radius: 6px;
+              transition: all .5s;
+
+              .treeBox {
+                overflow: hidden;
+                // border: 1px solid #000;
+                border-radius: 4px;
+              }
+            }
+
+            .sub_charts_box {
+              display: inline-block;
+              margin-right: 16px;
+              flex: 1;
+              min-width: 125px;
+              height: 100%;
+              margin-bottom: 20px;
+              position: relative;
+              cursor: pointer;
+
+              .title_warm {
+                float: right;
+                color: #ff4d4d;
+              }
+            }
+          }
+        }
+
+        .ant-tabs-ink-bar-animated {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .ant-card-bordered {
+    height: 100%;
+    border: none !important;
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 8px !important;
+  }
+
+  .ant-tabs-top {
+    border: none;
+    background: transparent;
+
+    &>.ant-tabs-nav::before {
+      border-bottom: none !important;
+    }
+  }
+
+  .ant-tabs-nav-wrap {
+    padding: 0;
+  }
+
+  // 为了echart resize的时候宽度正确
+  .ant-tabs-content {
+    position: relative;
+  }
+
+  .ant-tabs-tabpane {
+    display: block !important;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ant-tabs-tabpane-active {
+    visibility: visible;
+  }
+}

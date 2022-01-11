@@ -1,0 +1,152 @@
+.benefit-monitor-page {
+  background: transparent;
+
+  .item {
+    color          : #fff;
+    display        : flex;
+    justify-content: center;
+    height         : 100px;
+    position       : relative;
+    border-radius  : 5px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .count {
+      margin-top: 10px;
+    }
+
+    .name {
+      margin-top: 10px;
+    }
+  }
+
+  .item0 {
+    background: rgb(90, 182, 219);
+  }
+
+  .item1 {
+    background: rgb(80, 195, 188);
+  }
+
+  .item2 {
+    background: rgb(246, 116, 103);
+  }
+
+  .item3 {
+    background: rgb(246, 156, 18);
+  }
+
+  .item4 {
+    background: rgb(189, 141, 239);
+  }
+
+  .item-icon {
+    position: absolute;
+    right   : 10px;
+    bottom  : 10px;
+  }
+
+  .chart {
+    font-size    : 12px;
+    margin-top   : 10px;
+    border-radius: 5px;
+    padding      : 5px;
+  }
+
+  .chart-name {
+    margin-left: 30px;
+  }
+
+  .date-type {
+    cursor       : pointer;
+    border-radius: 3px;
+    text-align   : center;
+
+    &.selected {
+      background: #22add4;
+      color     : #fff;
+    }
+
+    &:hover {
+      background: #22add4;
+    }
+  }
+}
+
+.benefit-monitor-table {
+  position: relative;
+
+  :global {
+    thead {
+      display: none;
+    }
+  }
+
+  .table-left {
+    :global {
+      .ant-table-tbody::after {
+        content         : ' ';
+        width           : 1px;
+        height          : calc(100% + 34px);
+        position        : absolute;
+        top             : -34px;
+        right           : 0;
+        background-color: #e9ecf3;
+      }
+    }
+  }
+
+  .table-header {
+    flex-shrink  : 0;
+    background   : #f6f6f6;
+    border-bottom: 1px solid #e8e8e8;
+    display      : flex;
+
+    .table-header-cell {
+      display    : inline-block;
+      padding    : 6px 14px;
+      flex-grow  : 1;
+      flex-basis : 12.5%;
+      color      : rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+    }
+  }
+}
+
+:global(.dark-theme) {
+
+  .benefit-monitor-table {
+
+    .table-left {
+      :global {
+        .ant-table-tbody::after {
+          background-color: #3a3a3a;
+        }
+      }
+    }
+
+    .table-header {
+      background   : #1d1d1d;
+      border-bottom: 1px solid #2d2d2d;
+      color        : #fff;
+
+      .table-header-cell {
+
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+:global {
+  .ant-form-item-label {
+    overflow: inherit !important;
+  }
+
+  .ant-table-wrapper {
+    overflow: inherit !important;
+  }
+}

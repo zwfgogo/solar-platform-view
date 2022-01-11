@@ -1,0 +1,187 @@
+@import (reference) '../../../static/themes/default.less';
+@tracking-chart-detail-width: 490px;
+
+.empty-container {
+  border: 1px solid @cardBorderColor;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracking-chart {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  .chart-container,
+  .detail {
+    border: 1px solid @cardBorderColor;
+    border-radius: 4px;
+  }
+  .chart-container {
+    flex-grow: 1;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    > header {
+      padding: 9px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid @cardBorderColor;
+      flex-shrink: 0;
+    }
+    > footer {
+      flex-grow: 1;
+      margin-top: 10px;
+      position: relative;
+    }
+  }
+  .chart-filter {
+    display: flex;
+    flex-shrink: 1;
+    overflow: hidden;
+    :global(.wanke_selection) {
+      width: auto
+    }
+  }
+  .data {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 16px;
+    .data-item:not(:last-of-type)::after {
+      content: ' ';
+      display: inline-block;
+      width: 1px;
+      height: 1em;
+      background-color: @cardBorderColor;
+      margin-left: 16px;
+      margin-right: 16px;
+      position: relative;
+      top: 2px;
+    }
+    .data-value {
+      color: rgba(61,126,255,1);
+    }
+    .btn {
+      border: 1px solid rgba(61,126,255,1);
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 0 8px;
+      margin-left: 32px;
+    }
+  }
+  .data-item {
+
+  }
+  .detail {
+    flex-shrink: 0;
+    width: @tracking-chart-detail-width;
+    display: flex;
+    flex-direction: column;
+    > * {
+      flex-shrink: 0;
+    }
+    .message {
+      flex-grow: 1;
+      border: 1px dashed @cardBorderColor;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 16px 16px;
+      > * {
+        flex-shrink: 0;
+      }
+      .message-content {
+        flex-grow: 1;
+        margin: 0 16px;
+        border-bottom: 1px solid @cardBorderColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      > footer {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 16px;
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .title {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .detail-label {
+    font-size: 16px;
+    color: @wanke-primary-grey;
+    padding: 0 16px;
+  }
+  .detail-content {
+    font-size: 16px;
+    margin-top: 6px;
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+  .tag {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    border: 1px solid currentColor;
+    padding: 0 8px;
+    &.orange {
+      color: rgba(250,173,20,0.9);
+    }
+    &.blue {
+      color: #50C3F5;
+    }
+    &.green {
+      color: #52C41A;
+    }
+    &.grey {
+      color: #788CAA;
+    }
+  }
+}
+
+:global(.dark-theme) {
+  @import (reference) '../../../static/themes/dark.less';
+  .empty-container {
+    border: 1px solid @cardBorderColor;
+  }
+  .chart-container,
+  .detail {
+    border: 1px solid @cardBorderColor;
+    .message {
+      border: 1px dashed @cardBorderColor;
+      .message-content {
+        border-bottom: 1px solid @cardBorderColor;
+      }
+    }
+  }
+  .data {
+    .data-item:not(:last-of-type)::after {
+      background-color: @cardBorderColor;
+    }
+  }
+  .chart-container {
+    > header {
+      border-bottom: 1px solid @cardBorderColor;
+    }
+  }
+  .detail-label {
+    color: @wanke-primary-grey;
+  }
+}

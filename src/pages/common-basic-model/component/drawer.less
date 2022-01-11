@@ -1,0 +1,35 @@
+@import (reference) '../../../static/themes/default.less';
+.publish-drawer {
+    .ant-drawer-wrapper-body {
+        display: flex;
+        flex-direction: column;
+
+        .ant-drawer-body {
+            flex: 1;
+            overflow: hidden;
+        }
+    }
+    .ant-drawer-header{
+        margin: 0 10px;
+    }
+    .ant-drawer-title{
+        color:@wanke-light-font-color;
+        position: relative;
+        left: -25px;
+        font-weight: bold;
+    }
+   
+    .ant-drawer-body {
+        padding: 0 10px;
+    }
+
+}
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .publish-drawer {
+        .ant-drawer-title{
+            color:@wanke-light-font-color;
+        }
+    }
+}

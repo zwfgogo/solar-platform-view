@@ -1,0 +1,81 @@
+.y_card {
+	background-color: #fff;
+	border-radius: 4px;
+	width: 550px;
+	position: relative;
+	transition: all .3s;
+	overflow: hidden;
+
+	.card_head {
+		font-family: "微软雅黑";
+		height: 50px;
+		width: 100%;
+		padding-left: 22px;
+		position: relative;
+		box-sizing: border-box;
+		display: inline-block;
+		z-index: 3;
+		border-bottom: 1px solid #f0f0f0;
+
+		>div {
+			float: left;
+			display: block;
+			position: relative;
+			left: 20px;
+			top: 11px;
+			height: 32px;
+			width: 32px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		>img {
+			float: left;
+			display: block;
+			position: relative;
+			left: 20px;
+			top: 8px;
+			height: 60%;
+		}
+
+		>.title {
+			float: left;
+			font-size: 16px;
+			line-height: 50px;
+			margin-left: 50px;
+			display: block;
+			height: 100%;
+		}
+
+		>.no_icon {
+			float: left;
+			font-size: 16px;
+			color: #000;
+			line-height: 50px;
+			display: block;
+			height: 100%;
+		}
+	}
+
+	.card_body {
+		width: 100%;
+		position: absolute;
+		top: 50px;
+		bottom: 0;
+		padding: 10px 15px;
+	}
+}
+
+.dark-theme {
+	.y_card {
+		background-color: #1d222f;
+
+		.card_head {
+			border-bottom: 1px solid #303030;
+
+			>.no_icon {
+				color: #fff;
+			}
+		}
+	}
+}

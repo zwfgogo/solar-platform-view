@@ -1,0 +1,50 @@
+.statistical-card {
+  display: flex;
+  flex-direction: column;
+  .info {
+    flex-shrink: 0;
+    display: flex;
+    height: 52px;
+  }
+  .chart-container {
+    flex-grow: 1;
+    position: relative;
+  }
+}
+.info-item {
+  flex-grow: 1;
+  text-align: center;
+  position: relative;
+  padding: 5px 0;
+  &:first-child::after {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: #dedede;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+  .label {
+    font-size: 14px;
+    color: #333333;
+    margin: 0;
+  }
+  .desc {
+    font-size: 14px;
+    color: #999999;
+    margin: 0;
+  }
+}
+
+:global(.dark-theme) {
+  .info-item {
+    .label {
+      color: #fff;
+    }
+    .desc {
+      color: #999999;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.page {
+    .header {
+        border: solid 1px #f1f1f5;
+        flex: 0.1;
+        background-color: #fafafb;
+        min-height: 46px;
+
+        p {
+            line-height: 46px;
+            margin-left: 10px;
+        }
+    }
+
+    .status {
+        font-size: 16px;
+    }
+
+    .detail {
+        height: 25%;
+        width: 100%;
+
+        span {
+            line-height: 25px;
+        }
+    }
+    .device-basic-info {
+        border-bottom: 1px solid #f1f1f5;
+    }
+}
+
+:global(.dark-theme) {
+    .page {
+        .header {
+            border: solid 1px #333;
+            background-color: #333;
+        }
+        .device-basic-info {
+            border-bottom: 1px solid #2d2d2d;
+        }
+    }
+}

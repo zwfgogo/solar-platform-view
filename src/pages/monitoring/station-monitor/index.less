@@ -1,0 +1,117 @@
+.monitoring {
+    background-color: #f0f2f5;
+}
+
+:global(.dark-theme) {
+    .monitoring {
+        background-color: #050A19;
+    }
+}
+
+.mid-div {
+    top: 50%;
+    position: relative;
+    transform: translate(0, -50%);
+
+    p {
+        margin-bottom: 0px;
+    }
+}
+
+.page {
+    background-color: #f0f2f5;
+}
+
+:global(.dark-theme) {
+    .page {
+        background-color: #111624;
+    }
+}
+
+.detailInformation {
+    p {
+        margin-bottom: 3px;
+    }
+
+    .address {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.alarm {
+    padding: 0 2px 0 5px;
+    height: 25px;
+    background-color: #fdf8e9;
+    line-height: 25px;
+    border-radius: 4px;
+
+    .alarmContent {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 360px;
+        display: inline-block;
+
+    }
+
+    span {
+        font-size: 12px;
+    }
+}
+
+.greyBorder {
+    font-family: Microsoft YaHei UI;
+    border: solid 1px #eeeeee;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    padding-right: 16px;
+
+    p {
+        margin-bottom: 0;
+        font-size: 12px;
+        color: #4f4f4f;
+    }
+
+    p:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    .imgDiv {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titleDiv {
+        text-align: left;
+        justify-content: center;
+    }
+
+    .detailTime {
+        text-align: left;
+        justify-content: center;
+    }
+
+    .detailValue {
+        text-align: right;
+        justify-content: center;
+
+    }
+}
+
+:global(.dark-theme) {
+    .alarm {
+        background-color: #1E1E28;
+    }
+
+    .greyBorder {
+        border: none;
+        background-color: #070A1B;
+
+        p {
+            color: #BDBDBD;
+        }
+    }
+
+}

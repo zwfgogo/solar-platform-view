@@ -1,0 +1,1406 @@
+.dark-theme {
+    background: #0B1026;
+    color: rgba(255, 255, 255, 0.85);
+
+    @import './platform-app.less';
+    @import './common.less';
+    @import './reset.less';
+    @import '../frameset/system-info.less';
+    @import './themes/dark.less';
+
+    .logo {
+        height: 27px;
+    }
+
+    .ant-table {
+        .ant-table-thead {
+            .ant-table-cell {
+                color: rgba(255, 255, 255, 0.85);
+            }
+            .ant-table-cell-fix-left {
+                background: rgb(29, 29, 29);
+            }
+        }
+        .ant-table-tbody {
+            .ant-table-row:nth-of-type(even) {
+                .ant-table-cell-fix-left {
+                    background: rgb(21, 27, 39);
+                }
+            }
+            .ant-table-row:nth-of-type(odd) {
+                .ant-table-cell-fix-left {
+                    background: rgb(15, 22, 34);
+                }
+            }
+        }
+    }
+
+    .ant-table-tbody tr td:first-child {
+        border-left: 1px solid #303030;
+    }
+
+    .ant-table-tbody tr td:last-child {
+        border-right: 1px solid #303030;
+    }
+
+    .ant-modal-header {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .ant-modal-footer {
+        border-radius: 0 0 4px 4px;
+    }
+
+    .ant-btn-default {
+        background-color: '#050A19'
+    }
+
+    .border-header {
+        color: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .box-header {
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .header-border-bottom {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .ant-switch-checked {
+        background-color: #3D7EFF;
+    }
+
+    .ant-tooltip {
+        max-width: 300px;
+    }
+
+    .ant-form-item-label {
+        display: inline-block !important;
+    }
+
+    .ant-tabs-tab {
+        margin: 0 24px 0 0;
+    }
+
+    .ant-tabs-tab:first-child {
+        margin-left: 16px;
+    }
+
+    .ant-btn {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0);
+        border-radius: 4px;
+    }
+
+    .ant-btn:hover,
+    .ant-btn:focus {
+        color: rgba(255, 255, 255, 0.85);
+        background: #424651;
+        border-color: #424651;
+    }
+
+    .ant-btn:active {
+        color: rgba(255, 255, 255, 0.85);
+        background: #424651;
+        border-color: #424651;
+    }
+
+    .ant-btn-primary:hover,
+    .ant-btn-primary:focus {
+        color: #fff;
+        background: #508aff;
+        border-color: #508aff;
+    }
+
+    .ant-btn-primary {
+        background: #3D7EFF;
+        border-color: #3D7EFF;
+    }
+
+    .ant-btn-primary:active {
+        color: #fff;
+        background: #096dd9;
+        border-color: #096dd9;
+    }
+
+    a {
+        color: #177ddc;
+    }
+
+    .full-loading {
+        background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .wanke-table-virtual .virtual-table-cell {
+        background: transparent;
+        color: #fff;
+        .virtual-table-cell-inner {
+            background: #141414;
+            border-bottom-color: #2d2d2d;
+            border-right-color: #2d2d2d;
+            border-top-color: #2d2d2d;
+            border-left-color: #2d2d2d;
+        }
+    }
+
+    .system-crumbs {
+        color: #acacac;
+
+        .selectStation {
+            &::after {
+                background: rgba(255, 255, 255, 0.10);
+            }
+        }
+    }
+
+    .app-header {
+
+        .pv-logo,
+        .i18n {
+            filter: invert(100%);
+        }
+    }
+
+    .detail-item {
+        .item-label {
+            color: #fff;
+        }
+
+        .item-txt {
+            color: #fff;
+        }
+    }
+
+    .system-info-drawer {
+        .tab {
+            &.active {
+                background: #333;
+            }
+        }
+    }
+
+    .panel-month {
+        color: #666;
+    }
+
+    .white-box {
+        background-color: #141414;
+
+        .header {
+            color: #fff;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        .title {
+            color: #3d7eff;
+        }
+    }
+
+    .ant-table-tbody>tr.ant-table-row-selected>td {
+        border-color: #303030;
+    }
+
+    .edit-tag-add-btn {
+        color: #3d7eff;
+    }
+
+    .tab-price-new-box-href {
+        color: #3d7eff;
+    }
+
+    .tab-price-new-box-header {
+        border-bottom: 1px solid #313131;
+
+        &:before {
+            background-color: #3d7eff;
+        }
+    }
+
+    .edit-tag-item-box {
+        .anticon {
+            color: @error;
+        }
+    }
+
+    .edit-tag-popover-box {
+        .ant-popover-title {
+            background-color: @tipsBgColor;
+            border-bottom: 1px solid #666;
+        }
+
+        .ant-popover-arrow {
+            border-color: @tipsBgColor  !important;
+        }
+    }
+
+    .edit-tag-popover-footer {
+        &-title {
+            color: #177ddc;
+        }
+    }
+
+    .tab-price-new-sub {
+        &-title {
+            &-primary {
+                color: #309afe;
+            }
+
+            &-warn {
+                color: #ff974a;
+            }
+        }
+    }
+
+    .divider-box {
+        .divider {
+            border-top: 1px dashed #313131;
+        }
+
+        &:before {
+            border: 1px solid #313131;
+        }
+
+        &:after {
+            border: 1px solid #313131;
+        }
+    }
+
+    .tab-price-new {
+
+        .ant-tabs {
+            .ant-tabs-tab {
+                margin: 0px;
+                border-color: #707070;
+
+                &-active {
+                    border: 1px solid #177ddc;
+                    background-color: #177ddc;
+
+                    .ant-tabs-tab-btn {
+                        color: #fff;
+                    }
+                }
+
+                &-btn {
+                    color: #b1b1b1;
+                }
+            }
+        }
+
+        .ant-tabs-content {
+            .ant-tabs-tabpane {
+                .tab-price-body {
+                    border-color: #313131 !important;
+                }
+
+                .tab-price-body-last {
+                    border-color: #313131 !important;
+                }
+            }
+        }
+
+        .add-btn-box {
+            border-color: #313131;
+        }
+    }
+
+    .tab-price-new-sub-btn {
+        .ant-btn-dangerous {
+            background-color: #ff6464;
+
+            &:focus {
+                background-color: #ff6464;
+            }
+        }
+
+    }
+
+    .dealers-row {
+
+        // border-bottom: 1px dashed #313131;
+        margin-bottom: 16px;
+
+        .dealers-month-row {
+            border: 1px dashed #313131;
+            box-shadow: 0px 4px 10px 2px rgba(255, 255, 255, 0.05);
+        }
+
+        .edit-form-extra,
+        .edit-form-extra-m {
+            border: 1px solid #313131;
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .edit-form-extra-info {
+            color: #177ddc;
+        }
+    }
+
+    .add-btn-href {
+        color: #177ddc;
+
+        &-disabled {
+            color: #adadad;
+        }
+    }
+
+    .remove-btn-href {
+        color: #3D7EFF;
+        background-color: rgba(61,126,255,0.10);
+    }
+
+    .lgc-page {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .clickable-text {
+        color: #177ddc;
+        cursor: pointer;
+    }
+
+    .customer-modal-body {
+        &-left {
+            border-right: 1px solid #313131;
+        }
+
+        &-right {
+            &-filter {
+                border-bottom: 1px solid #313131;
+            }
+        }
+    }
+
+    .pageHeader .wanke_selection {
+        vertical-align: sub;
+    }
+
+    .info_box_value {
+        .info_sub_title {
+            color: rgba(255, 255, 255, 0.65);
+        }
+    }
+
+    .sub_card {
+        background-color: rgba(11, 16, 38, 0.85);
+    }
+
+    .pageBody2 {
+        .ant-tabs {
+            .ant-tabs-tab-active {
+                background-color: #2f80ed;
+
+                .ant-tabs-tab-btn {
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+        }
+
+        .battery-charts-list {
+            .my_charts_active {
+                border: solid 2px #2f80ed !important;
+            }
+        }
+    }
+
+    // 
+    .so-tree-text {
+        .anticon {
+            color: rgba(255, 255, 255, 0.45);
+        }
+    }
+
+    // Input组件
+    .ant-input-affix-wrapper {
+        padding: 4px 8px;
+        color: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 4px;
+
+        &-lg {
+            padding: 6px 8px;
+        }
+
+        &-sm {
+            padding: 0px 8px;
+        }
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.85);
+        }
+
+        &:placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        &[disabled] {
+            color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.08);
+
+            &:hover,
+            &:active {
+                color: rgba(255, 255, 255, 0.3);
+                background-color: rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        .ant-input-prefix {
+            &>.anticon {
+                color: rgba(255, 255, 255, 0.65) !important;
+            }
+        }
+    }
+
+    .ant-input {
+        color: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        padding: 4px 8px;
+        border-radius: 4px;
+
+        &-lg {
+            padding: 6px 8px;
+        }
+
+        &-sm {
+            padding: 0px 8px;
+        }
+
+        &:placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        &[disabled] {
+            color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.08);
+
+            &:hover,
+            &:active {
+                color: rgba(255, 255, 255, 0.3);
+                background-color: rgba(255, 255, 255, 0.08);
+            }
+        }
+    }
+
+    .ant-input-clear-icon {
+        &:hover {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        &:active {
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+    .ant-input-search{
+        .ant-input{
+            border-right: none !important;
+        }
+        .ant-input-group-addon{
+            background-color: transparent!important;
+        }
+    }
+
+    .ant-input-search-button {
+        border-left: none !important;
+        border-color: rgba(255, 255, 255, 0.45) !important;
+        background-color: transparent!important;
+        border-radius: 0px 4px 4px 0px !important;
+        // &:hover {
+        //     border-color: rgba(255, 255, 255, 0.85);
+        // }
+    }
+
+    // NumberInput
+    .ant-input-number {
+        padding: 0px 8px;
+        color: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 4px;
+
+        &:placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        &:hover,
+        &-focused {
+            border-color: rgba(255, 255, 255, 0.65);
+        }
+
+        &-disabled {
+            color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+
+            &:hover {
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+            & + .input-suffix {
+                background-color: rgba(255, 255, 255, 0.05);
+                border-color: rgba(255, 255, 255, 0.1) !important;
+                &:hover {
+                    border-color: rgba(255, 255, 255, 0.1) !important;
+                }
+            }
+        }
+
+        &[disabled] {
+            color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+
+            &:hover {
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        &-lg {
+            padding: 6px 8px;
+        }
+
+        &-sm {
+            padding: 0px 8px;
+            font-size: 12px;
+        }
+
+        &-handler {
+            color: rgba(255, 255, 255, 0.65);
+
+            &-up-inner,
+            &-down-inner {
+                color: rgba(255, 255, 255, 0.65);
+            }
+
+            &-wrap {
+                border-left: 1px solid rgba(255, 255, 255, 0.65);
+            }
+
+            &-down {
+                border-top: 1px solid rgba(255, 255, 255, 0.65);
+            }
+
+            &:active {
+                background: rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        &-input {
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    // radio
+    .ant-radio-wrapper {
+        color: rgba(255, 255, 255, 0.85);
+
+        .ant-radio-inner {
+            border: 1px solid rgba(255, 255, 255, 0.45);
+
+            &:after {
+                background-color: #3d7eff;
+            }
+        }
+
+        &:hover {
+            .ant-radio-inner {
+                border-color: rgba(255, 255, 255, 0.65);
+            }
+        }
+    }
+
+    .ant-radio-disabled {
+        .ant-radio-inner {
+            border-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.05);
+
+            &:after {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    // checkBox
+    .ant-checkbox-wrapper {
+        color: rgba(255, 255, 255, 0.85);
+
+        .ant-checkbox-inner {
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 4px;
+        }
+
+        &:hover {
+            .ant-checkbox-inner {
+                border-color: rgba(255, 255, 255, 0.65);
+            }
+        }
+    }
+
+    .ant-checkbox-indeterminate {
+        .ant-checkbox-inner {
+            border-color: rgb(61, 126, 255, 0.85);
+
+            &:after {
+                height: 4px;
+                background-color: rgb(61, 126, 255, 0.85);
+            }
+        }
+    }
+
+    .ant-checkbox-disabled {
+        .ant-checkbox-inner {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.25) !important;
+        }
+
+        .ant-checkbox-checked {
+            .ant-checkbox-inner:after {
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+        }
+    }
+
+
+    // select
+    .ant-select {
+        color: rgba(255, 255, 255, 0.85);
+
+        &-selection-placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        &:not(.ant-select-customize-input) {
+            .ant-select-selector {
+                border: 1px solid rgba(255, 255, 255, 0.45);
+                border-radius: 4px;
+                padding: 0px 8px;
+            }
+        }
+
+        &-focused {
+            &:not(.ant-select-disabled) {
+                &.ant-select {
+                    &:not(.ant-select-customize-input) {
+                        .ant-select-selector {
+                            border-color: rgba(255, 255, 255, 0.65);
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.ant-select-disabled) {
+            &:hover {
+                .ant-select-selector {
+                    border-color: rgba(255, 255, 255, 0.65);
+                }
+            }
+        }
+
+        &-clear {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        &-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+            color: rgba(255, 255, 255, 0.45);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .select-tooltip {
+        .ant-tooltip-inner {
+            background-color: rgba(5, 10, 25, 1);
+            color: rgba(255, 255, 255, 0.85);
+            border-radius: 4px;
+        }
+
+        .ant-tooltip-arrow {
+            .ant-tooltip-arrow-content {
+                background-color: rgba(5, 10, 25, 1);
+            }
+        }
+    }
+
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+        color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(5, 10, 25, 0.10);
+    }
+
+    // cascader
+    .ant-cascader-menu-item:hover {
+        background-color: rgba(5, 10, 25, 0.10);
+    }
+
+    .ant-cascader-menu-item:not(.ant-cascader-menu-item-expand):hover {
+        color: #3D7EFF;
+    }
+
+    // RangePicker
+    .ant-picker {
+        box-shadow: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: rgba(255, 255, 255, 0.65);
+        }
+
+        &.ant-picker-focused {
+            border-color: rgba(255, 255, 255, 0.65);
+        }
+
+        .ant-picker-active-bar {
+            background: none;
+        }
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
+        background: rgba(61, 126, 255, 0.05) !important;
+    }
+
+    .wanke-range-picker-no-select-range .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before,
+    .wanke-range-picker-no-select-range .ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before,
+    .wanke-range-picker-no-select-range .ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover-end::before {
+        background: rgba(61, 126, 255, 0.05) !important;
+    }
+
+    .ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start .ant-picker-cell-inner::after,
+    .ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end .ant-picker-cell-inner::after {
+        background: rgba(61, 126, 255, 0.05);
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+        background: #3D7EFF;
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+        border-color: #3D7EFF;
+    }
+
+    .ant-picker-time-panel-column>li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
+        background: #3D7EFF;
+        color: #ffffff;
+    }
+
+    .ant-picker-time-panel-column>li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner {
+        height: 24px;
+        line-height: 24px;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: rgba(61, 126, 255, 0.05);
+            // color: #3D7EFF;
+        }
+    }
+
+    .ant-picker-time-panel-column>li {
+        padding: 2px;
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-in-range::before {
+        background: rgba(61, 126, 255, 0.05);
+    }
+
+    .wanke-range-picker-no-select-range .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-range-start) .ant-picker-cell-inner {
+        background: rgba(61, 126, 255, 0.05);
+    }
+
+    .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+    .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner {
+        background-color: rgba(61, 126, 255, 0.05);
+    }
+
+    .wanke-chart-point-info-box {
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
+
+        .wanke-chart-line-text-title,
+        .wanke-chart-line-text-value,
+        .wanke-chart-point-date {
+            color: #ffffff;
+        }
+    }
+
+    .wanke-chart-empty {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .formLayout {
+        background-color: rgba(255, 255, 255, 0.05);
+
+        .form-item-last {
+            background-color: #0e1321;
+        }
+    }
+
+    .page-sub-container {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .page-right-container {
+        background-color: #1a1f2c;
+    }
+
+    .page-sub-left,
+    .page-sub-right {
+        background-color: rgba(255, 255, 255, 0.05);
+        .page-sub-right-header{
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+        }
+        .page-more-text{
+            color: rgba(255,255,255,0.45);
+        }
+    }
+
+    .page-next {
+        background-color: #010615;
+    }
+
+    .page-first-item,
+    .page-second-item,
+    .page-last-item,
+    .page-next-item {
+        background-color: #0e1321;
+
+        .common-echart-empty {
+            color: rgba(255, 255, 255, 0.3)
+        }
+    }
+
+    .page-first-item {
+        .card-box {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            .card-title {
+                color: #fff;
+            }
+
+            .card-display {
+                &-item {
+                    &-label {
+                        color: #888;
+                    }
+
+                    &-value {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .card-footer {
+                // border: 1px rgba(255, 255, 255, 0.15) dashed;
+                background-color: rgba(255,255,255,0.02);
+                .card-context {
+                    &-title {
+                        color: #fff;
+                    }
+
+                    &-value {
+                        &>span {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page-title {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+    }
+
+    .history-query-chart {
+        .wanke-chart-label {
+            color: rgba(255, 255, 255, 0.45);
+
+            &:hover {
+                color: rgb(255, 255, 255);
+            }
+        }
+
+        .wanke-chart-hide {
+            color: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    .priceLabel {
+        color: #fff !important;
+    }
+
+    .page-wrap {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .microgrid_crumbs_page{
+        background-color: #010615;
+    }
+
+    .weather_label{
+        color: rgba(255,255,255,0.25);
+    }
+
+    .weather_value{
+        color: rgba(255,255,255,0.65);   
+    }
+
+    .weather_running{
+        &::before{
+            content: '';
+            display: inline-block;
+            height: 12px;
+            border-left: 1px solid rgba(255,255,255,0.1);
+            margin-right: 13px;
+        }
+    }
+
+    .level-config-page{
+        &-item{
+            background-color: rgba(255, 255, 255, 0.05);
+            label{
+                color: rgba(255,255,255,0.85);
+            }
+            .card-body{
+                &-item{
+                    border: 1px dashed rgba(255,255,255,0.25);
+                    .label{
+                        border-bottom: 1px dashed rgba(255,255,255,0.25);
+                        color: rgba(255,255,255,0.85);
+                    }
+                    .card-detail{
+                        &-select-title{
+                            color: rgba(255,255,255,0.85);
+                        }
+                        &-title{
+                            color: rgba(255,255,255,0.45);
+                        }
+                        &-body{
+                            color: rgba(255,255,255,0.85);
+                        }
+                    }
+                }
+              }
+        }
+    }
+
+    .level-config-page-user{
+        &-item{
+            background-color:rgba(255, 255, 255, 0.05);
+
+            label {
+                color: rgba(255,255,255, 0.85);
+            }
+
+            .card-body{
+                &-item{
+                    border: 1px dashed rgba(255,255,255, 0.25);
+                }
+              }
+        }
+    }
+
+    .alarm-type-page-body {
+        background: rgba(255, 255, 255, 0.05);
+
+        .alarm-type-page-btn-groups {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255,255,255, 0.1);
+        }
+    }
+
+    .alarm-rules-page {
+        .ant-tabs {
+            .ant-tabs-content {
+                .ant-tabs-tabpane {
+                    .alarm-rules-tabs-body {
+                        .formLayout {
+                            border: 1px solid rgba(255,255,255,0.25);
+                            .ant-form-item-control-input-content{
+                                background: #1d222f;
+                            }
+                        }
+                        .alarm-rules-page-btn-groups {
+                            background: rgba(255, 255, 255, 0.05);
+                            border: 1px solid rgba(255,255,255, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .alarm-rules-edit-page{
+    //     .alarm-rules-edit-header{
+    //         color: rgba(255,255,255, 1);
+    //         border-bottom: 1px solid rgba(255,255,255,0.1);
+    //     }
+
+    //     .alarm-rules-context{
+    //         border: 1px solid rgba(255,255,255,0.1);
+    //         &-header{
+    //             color: #fff;
+    //         }
+
+    //         .alarm-type-form-list{
+    //             border: 1px solid rgba(255,255,255,0.1);
+    //             box-shadow: 0px 4px 10px 2px rgba(255,255,255,0.05);
+    //         }
+
+    //         .formula-box {
+    //             .ant-form-item-control-input-content{
+    //               border: 1px solid rgba(255, 255, 255, 0.45);
+    //             }
+    //         }
+
+    //         .dataShowItem{
+    //             background-color: rgba(255,255,255,0.05);
+    //         }
+
+    //         .plus-block-btn{
+    //             &:hover{
+    //               color: rgba(255,255,255,0.85);
+    //               border-color: rgba(255,255,255,0.25);
+    //             }    
+    //           }
+    //     }
+
+    //     .alarm-rules-form-view{
+    //         label{
+    //           display: inline-block;
+    //           color: rgba(255,255,255,0.45);
+    //           &:after{
+    //                 content: ':';
+    //                 display: inline-block;
+    //             }
+    //         }
+    //         .form-view-value{
+    //             color: rgba(255,255,255,0.85);
+    //             display: inline-block;
+    //             margin-left: 8px;
+    //         }
+    //     }
+    // }
+
+    .alarm-rules-edit-page {
+        .alarm-rules-edit-header {
+            color: rgba(255, 255, 255, 0.85);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .alarm-rules-context {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            &-header {
+                color: rgba(255, 255, 255, 0.85);
+            }
+
+            .alarm-type-form-list {
+                border: 1px dashed rgba(255, 255, 255, 0.25);
+                box-shadow: 0px 4px 10px 2px rgba(255, 255, 255, 0.05);
+            }
+
+            .formula-box {
+                .ant-form-item-control-input-content {
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                }
+            }
+
+            .dataShowItem {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            .plus-block-btn {
+                color: rgba(255, 255, 255, 0.85);
+                border: 1px dashed rgba(255, 255, 255, 0.25);
+                &:hover {
+                    color: #3D7EFF;
+                    border: 1px dashed #3D7EFF;
+                }
+            }
+        }
+
+        .alarm-rules-form-view {
+            label {
+                color: rgba(255, 255, 255, 0.45);
+                display: inline-block;
+
+                &:after {
+                    content: ':';
+                    display: inline-block;
+                }
+            }
+
+            .form-view-value {
+                display: inline-block;
+                color: rgba(255, 255, 255, 0.85);
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .alarm-rules-view-page {
+        .alarm-rules-edit-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .alarm-rules-form-view {
+            label {
+                color: rgba(255, 255, 255, 0.45);
+            }
+
+            .form-view-value {
+                color: rgba(255, 255, 255, 0.85);
+            }
+        }
+
+        .alarm-rules-context{
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            .data-type-card{
+                background-color: rgba(255, 255, 255,0.05);
+            }
+        }
+    }
+
+
+    .data-type-list{
+        background-color: #121625;
+    }
+
+    .ant-table{
+        table{
+            tr > td{
+                border-top: 1px solid rgba(255,255,255,0.05);
+                border-color: rgba(255,255,255,0.05);
+                &:first-child{
+                    border-left: 1px solid rgba(255,255,255,0.05);
+                    border-radius: 4px 0px 0px 4px;
+                }
+                &:last-child{
+                    border-right: 1px solid rgba(255,255,255,0.05);
+                    border-radius: 0px 4px 4px 0px;
+                }
+            }
+
+            .ant-table-placeholder > .ant-table-cell{
+                border-radius: 4px !important;
+            }
+        }
+    }
+
+    .columnPage{
+        .full-container{
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .sub-context{
+            background-color: rgba(255,255,255,0.02);
+           .e-ml15{
+               &::after{
+                   background-color: rgba(255,255,255,0.1);
+               }
+               .e-value{
+                    color: rgba(255,255,255,0.85);
+                }
+    
+                .e-unit{
+                    color: rgba(255,255,255,0.45);
+                }
+           }
+        }
+    }
+
+    .page-header-line{
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+        padding: 9px 16px;
+        .search-container{
+            margin-bottom: 0;
+        }
+    }
+
+    .dispatch-view{
+        .ant-form-item-label{
+            & > label{
+                color: rgba(255,255,255,0.45);
+            }
+        } 
+
+        .ant-form-item{
+            margin-bottom: 17px;
+        }
+    }
+
+    .customerModal{
+        .ant-modal-title{
+            font-size: 16px;
+            color: rgba(255,255,255,0.85);
+            line-height: 24px;
+            font-weight: 500;
+        }
+        &.max-height-70vh {
+            .ant-modal-body {
+                max-height: 70vh;
+                overflow: auto;
+            }
+        }
+    }
+
+    .tag-box{
+        .ant-tag{
+            background-color: rgba(255,255,255,0.05);
+        }
+        .tag-text-extra{
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
+            & > span{
+                color: #3D7EFF;
+            }
+        }
+    }
+
+    .page-card-list{
+        &-title{
+            color: rgba(255,255,255,0.45);
+        }
+        &-body{      
+            .page-card-list-item{
+              background-color: rgba(255,255,255,0.02);
+              &-title{
+                color: rgba(255,255,255,0.85);
+              }
+      
+              &-body{
+                .field-item{
+                    &-title{
+                        color: rgba(255,255,255,0.45);
+                    }
+                  }
+              }
+            }
+          }
+    }
+
+    .input-number-box{
+        .input-suffix{
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        &:hover{
+            .input-suffix{
+                border-color: rgba(255, 255, 255, 0.85);
+            }
+        }
+    }
+
+    .page-bg2{
+        .page-left-item{
+            background-color: rgba(255,255,255,0.05);   
+            .page-sub-box{
+                background-color: rgba(255,255,255,0.02);
+                .page-sub-body{
+                    &-item{
+                        background-color: rgba(255,255,255,0.02);
+                        .page-sub-label{
+                            color: rgba(255,255,255,0.45);
+                        }
+
+                        .page-sub-value{
+                            color: rgba(255, 255, 255, 0.85);
+                            span{
+                                color: rgba(255,255,255,0.45);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .page-card-box{
+                border: 1px dashed rgba(255,255,255,0.25);
+                .page-card-middle{
+                    .page-card-label{
+                        color: rgba(255,255,255,0.45);
+                    }
+                    .page-card-value{
+                        color: rgba(255,255,255,0.85);
+                    }
+                }
+
+                .page-card-right{
+                    border-left: 1px dashed rgba(255,255,255,0.1);
+                    .right-label{
+                        color: rgba(255,255,255,0.45);
+                    }
+
+                    .right-value{
+                        color: rgba(255,255,255,0.85);
+                    }
+                }
+            }
+        }
+
+        .page-right-item{
+            .card-charts-box{
+                background: rgba(255,255,255,0.05);
+                box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.05);
+                .card-charts-header{
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
+                    color: rgba(255,255,255,0.85);
+                    .card-header-right{
+                        .ant-radio-button-wrapper{
+                            color: rgba(255,255,255,0.45);
+                            border: 1px solid rgba(255,255,255,0.45);
+                        }
+                        .ant-radio-button-wrapper-checked{
+                            color: #3D7EFF;
+                            border: 1px solid #3D7EFF;
+                            background-color: rgba(61,126,255,0.10);
+                        }
+                    }
+                }
+            } 
+        }
+    }
+
+    .price-look-box{
+        border: 1px solid rgba(255,255,255,0.1);
+        .price-look-header{
+            color: rgba(255,255,255,0.85);
+            &::after{
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+        }
+        .price-look-body{
+            &-header{
+                color: rgba(255,255,255,0.85);
+            }
+            &-item {
+                &>span {
+                  color: rgba(255,255,255, 0.45);
+                }
+                &-value{
+                    color: rgba(255,255,255,0.85);
+                }
+            }
+        }
+    }
+
+    .table-disabled-row{
+        background-color: rgba(255,255,255,0.05) !important;
+        td{
+            background-color: transparent !important;
+        }
+    }
+
+    .page-sub-right{
+        .checkbox-box{
+            .checkbox-terminalTitle-box{
+                .checkbox-terminalTitle{
+                    color: rgba(255,255,255,0.45);
+                }
+
+                border-bottom: 1px dashed rgba(255,255,255,0.45);
+            }
+        }
+    }
+}

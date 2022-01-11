@@ -1,0 +1,41 @@
+.statistic-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .header {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .footer {
+    flex-shrink: 0;
+    list-style: none;
+    padding-left: 0;
+    .legend-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 10px;
+      color: #333333;
+      margin-top: 2px;
+      user-select: none;
+    }
+    .legend-item-hide {
+      color: #929292;
+    }
+    .icon {
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 0.5em;
+    }
+    .legend-title {
+      flex-grow: 1;
+    }
+    .legend-value {
+      flex-shrink: 0;
+    }
+  }
+}

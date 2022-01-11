@@ -1,0 +1,79 @@
+.benefit-monitor-page {
+    background: transparent;
+
+    .item {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        position: relative;
+        border-radius: 5px;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .count {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .name {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+
+    .item0 {
+        background: rgb(90, 182, 219);
+    }
+
+    .item1 {
+        background: rgb(80, 195, 188);
+    }
+
+    .item2 {
+        background: rgb(246, 116, 103);
+    }
+
+    .item3 {
+        background: rgb(246, 156, 18);
+    }
+
+    .item4 {
+        background: rgb(189, 141, 239);
+    }
+
+    .item-icon {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .chart {
+        font-size: 12px;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .chart-name {
+        margin-left: 30px;
+    }
+
+    .date-type {
+        cursor: pointer;
+        border-radius: 3px;
+        text-align: center;
+
+        &.selected {
+            background: #22add4;
+            color: #fff;
+        }
+
+        &:hover {
+            background: #22add4;
+        }
+    }
+}

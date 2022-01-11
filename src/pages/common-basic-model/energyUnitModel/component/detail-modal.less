@@ -1,0 +1,33 @@
+@import (reference) '../../../../static/themes/default.less';
+
+.basic-model-detail-energy-dialog-page(
+  @wanke-label-color
+) {
+  .basic-model-detail-energy-dialog {
+    .ant-modal-body {
+      max-height: 500px;
+      overflow: auto;
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item-label > label {
+      color: @wanke-label-color;
+    }
+  }
+}
+
+.basic-model-detail-energy-dialog-page(@wanke-label-color);
+
+.en {
+  .basic-model-detail-energy-dialog {
+    .ant-form-item-label {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../../../static/themes/dark.less';
+  .basic-model-detail-energy-dialog-page(@wanke-label-color);
+}

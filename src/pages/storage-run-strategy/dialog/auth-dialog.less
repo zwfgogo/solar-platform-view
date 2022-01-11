@@ -1,0 +1,47 @@
+@import (reference) '../../../static/themes/default.less';
+
+.auth-dialog {
+  .auth-dialog-title {
+    font-size: 16px;
+    color: @wanke-light-font-color;
+    display: flex;
+    align-items: center;
+  }
+  .auth-dialog-icon {
+    font-size: 24px;
+    color: #FAAD14;
+    margin-right: 16px;
+  }
+  .auth-dialog-body {
+    padding-left: 40px;
+    margin-top: 6px;
+  }
+  .auth-dialog-desc {
+    color: @wanke-primary-grey;
+  }
+  .auth-dialog-label {
+    color: @wanke-primary-grey;
+    margin-right: 10px;
+  }
+  .auth-dialog-value {
+    color: @wanke-light-font-color;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .auth-dialog {
+    .auth-dialog-title {
+      color: @wanke-light-font-color;
+    }
+    .auth-dialog-desc {
+      color: @wanke-primary-grey;
+    }
+    .auth-dialog-label {
+      color: @wanke-primary-grey;
+    }
+    .auth-dialog-value {
+      color: @wanke-light-font-color;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import (reference) '../../static/themes/default.less';
+.common-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  .title-left,
+  .title-right {
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    display: inline-block;
+    width: 2px;
+    margin-right: 8px;
+  }
+  .label {
+    font-size: 14px;
+    color: #333333;
+  }
+  &.common-title-with-border {
+    padding: 0 16px;
+    border-bottom: 1px solid @cardBorderColor;
+    font-weight: bold;
+    height: 50px;
+  }
+}
+
+
+:global(.dark-theme) {
+  @import (reference) '../../static/themes/dark.less';
+  .common-title {
+    .label {
+      color: #fff;
+    }
+    &.common-title-with-border {
+      border-bottom: 1px solid @cardBorderColor;
+    }
+  }
+}

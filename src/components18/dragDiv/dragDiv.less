@@ -1,0 +1,26 @@
+.drag {
+  width: 700px;
+  height: 500px;
+  background-color: transparent;
+  position: absolute;
+
+  :global(.out) {
+    position: absolute;
+    z-index: 9;
+    right: 20px;
+    top: 17px;
+    cursor: pointer;
+    color: #434343;
+    font-size: 16px;
+  }
+
+  .y_wrap {
+    height: 100%;
+  }
+}
+
+:global(.dark-theme) {
+  :global(.out) {
+    color: #ffffff;
+  }
+}

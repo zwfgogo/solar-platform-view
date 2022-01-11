@@ -1,0 +1,72 @@
+@import (reference) '../../../static/common.less';
+@import (reference) '../../../static/themes/default.less';
+
+.abnormal-device-modal {
+  .ant-tree-treenode {
+    width: 100%;
+  }
+  .ant-tree-node-content-wrapper {
+    .ellipsis();
+  }
+
+  .device-modal-title {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed @cardBorderColor;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+  }
+  .abnormal-device-modal-body {
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+  }
+  .abnormal-device-modal-left {
+    flex-shrink: 0;
+    width: 200px;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: 16px;
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 5%;
+      right: 0;
+      height: 90%;
+      width: 1px;
+      background-color: @cardBorderColor;
+    }
+  }
+  .abnormal-device-modal-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .abnormal-device-modal-filter{
+    flex-shrink: 0;
+    padding: 16px;
+  }
+  .abnormal-device-modal-chart{
+    flex-grow: 1;
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../../static/themes/dark.less';
+  .abnormal-device-modal {
+    .device-modal-title {
+      border-top: 1px dashed @cardBorderColor;
+    }
+    .abnormal-device-modal-left {
+      &::after {
+        background-color: @cardBorderColor;
+      }
+    }
+  }
+}

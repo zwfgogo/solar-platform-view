@@ -1,0 +1,233 @@
+@import (reference) '../../static/themes/default.less';
+.page-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  .menu {
+    flex-shrink: 0;
+    margin-bottom: 16px;
+  }
+  .header {
+    flex-shrink: 0;
+    margin-bottom: 16px;
+    display: flex;
+  }
+  .header-left {
+    flex-grow: 1;
+    .border-card-container {
+      display: flex;
+    }
+  }
+  .header-right {
+    flex-shrink: 0;
+    width: 460px;
+    margin-left: 16px;
+  }
+  .extra-desc {
+    flex-grow: 1;
+    height: 64px;
+    border: 1px dashed @cardBorderColor;
+    border-radius: @wanke-border-radius;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::after {
+      content: ' ';
+      width: 1px;
+      height: 16px;
+      border-right: 1px dashed @cardBorderColor;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+    }
+    .extra-desc-item {
+      flex-basis: 0%;
+      flex-grow: 1;
+      font-size: 16px;
+      margin-left: 24px;
+      line-height: 1;
+      span:nth-child(1) {
+        color: @wanke-label-color;
+        margin-right: 8px;
+      }
+      span:nth-child(2) {
+        font-size: 20px;
+        color: @wanke-lightest-font-color;
+      }
+      span:nth-child(3) {
+        color: @wanke-light-font-color;
+      }
+    }
+  }
+  .footer {
+    flex-grow: 1;
+  }
+}
+
+.border-card {
+  border: 1px solid @cardBorderColor;
+  border-radius: @wanke-border-radius;
+  display: flex;
+  flex-direction: column;
+  .border-card-title {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: @wanke-light-font-color;
+    padding: 16px 16px 0 16px;
+    line-height: 1;
+    font-weight: bold;
+    div:first-child {
+      position: relative;
+      &::before {
+        content: ' ';
+        position: absolute;
+        width: 2px;
+        height: 12px;
+        background-color: @primaryColor;
+        left: -16px;
+        top: 2px;
+      }
+    }
+    .btn {
+      font-size: 14px;
+      color: @primaryColor;
+      cursor: pointer;
+    }
+  }
+  .border-card-container {
+    flex-grow: 1;
+    padding: 16px;
+    position: relative;
+  }
+}
+
+.detail-card {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .detail-card-title {
+    font-size: 16px;
+    color: @wanke-label-color;
+  }
+  .detail-card-value {
+    span:first-child {
+      font-size: 24px;
+      color: @primaryColor;
+    }
+    span:last-child {
+      font-size: 16px;
+      color: @wanke-light-font-color;
+    }
+  }
+}
+
+.tag {
+  border-radius: 4px;
+  font-weight: normal;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.energy-detail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-direction: column;
+  .tag {
+    padding: 5px 14px;
+    margin: 4px 4px 0 0;
+  }
+  .tag-desc {
+    font-size: 12px;
+    color: @wanke-label-color;
+  }
+  .tag-value {
+    color: @wanke-light-font-color;
+  }
+  .info {
+    margin-bottom: 10px;
+    span:nth-child(odd) {
+      color: @wanke-label-color;
+      margin-right: 10px;
+    }
+  }
+}
+
+.card {
+  height: 80px;
+  background-color: @wanke-card-title-bg;
+  border-radius: @wanke-border-radius;
+}
+
+.detail-modal {
+  .card {
+    margin-bottom: 8px;
+  }
+}
+
+:global(.dark-theme) {
+  @import (reference) '../../static/themes/dark.less';
+  .border-card {
+    border: 1px solid @cardBorderColor;
+    .border-card-title {
+      color: @wanke-light-font-color;
+    }
+  }
+  .card {
+    background-color: @wanke-card-title-bg;
+  }
+  .detail-card {
+    .detail-card-title {
+      color: @wanke-label-color;
+    }
+    .detail-card-value {
+      span:first-child {
+        color: @primaryColor;
+      }
+      span:last-child {
+        color: @wanke-light-font-color;
+      }
+    }
+  }
+  .extra-desc {
+    border: 1px solid @cardBorderColor;
+    &::after {
+      border-right: 1px dashed @cardBorderColor;
+    }
+    .extra-desc-item {
+      span:nth-child(1) {
+        color: @wanke-label-color;
+      }
+      span:nth-child(2) {
+        color: @wanke-lightest-font-color;
+      }
+      span:nth-child(3) {
+        color: @wanke-light-font-color;
+      }
+    }
+  }
+  .energy-detail {
+    .info {
+      span:nth-child(odd) {
+        color: @wanke-label-color;
+      }
+    }
+    .tag-desc {
+      color: @wanke-label-color;
+    }
+    .tag-value {
+      color: @wanke-light-font-color;
+    }
+  }
+}

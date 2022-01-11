@@ -1,0 +1,139 @@
+@import (reference) '../../static/themes/default.less';
+
+.diagram-video-page {
+  font-size: 12px;
+
+  .video-list {
+    align-content: flex-start;
+    margin: -8px;
+  }
+
+  .svg-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .diagram-picture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .video-modes {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .tool-item {
+    width: 60px;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+
+    img {
+      width: 34px;
+    }
+  }
+
+  .video-item-wrap {
+    padding: 8px;
+
+    .video-item {
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      position: relative;
+    }
+
+    .video-item-menu {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      display: flex;
+    }
+
+    .video-item-menu-btn {
+      font-size: 16px;
+      background: @wanke-card-bg-color;
+      padding: 0px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      color: @wanke-label-color;
+    }
+
+    .to-add {
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-left: 3px;
+    }
+  }
+
+  .pull-right {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .ant-tabs,
+  .ant-tabs-content {
+    height: 100%;
+  }
+
+  .diagram-video-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 16px 16px;
+  }
+
+  .diagram-video-menu {
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    z-index: 99;
+  }
+  .no-video-item,
+  .ant-radio-button-wrapper {
+    color: @wanke-primary-grey;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: @primaryColor;
+  }
+}
+
+.zh {
+  .add-video-form {
+    .input-item {
+      width: 470px;
+    }
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .diagram-video-page {
+    .video-item-wrap {
+      .video-item {
+        background-color: #555;
+      }
+    }
+    .no-video-item,
+    .ant-radio-button-wrapper {
+      color: @wanke-primary-grey;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: @primaryColor;
+    }
+
+    .video-item-wrap {
+      .video-item-menu-btn {
+        background: @wanke-card-bg-color;
+        color: @wanke-label-color;
+      }
+    }
+  }
+
+  .diagram-video-menu {
+  }
+}

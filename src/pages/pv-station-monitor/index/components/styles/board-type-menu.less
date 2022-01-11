@@ -1,0 +1,24 @@
+@IconSize: 20px;
+
+.board-type-menu {
+  user-select: none;
+  background: #ffffff;
+  border-radius: 10px;
+  line-height: @IconSize;
+  padding: 7px 16px;
+  .tab {
+    color: #b5b5be;
+    font-size: @IconSize;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  .tab-active {
+    color: #3d7eff;
+  }
+}
+:global(.dark-theme) {
+  .board-type-menu {
+    background: #141414;
+  }
+}

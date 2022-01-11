@@ -1,0 +1,23 @@
+@import (reference) '../../../../static/themes/default.less';
+
+.basic-model-add-device-dialog-page() {
+  .basic-model-add-device-dialog {
+    .ant-modal-body {
+      max-height: 500px;
+      overflow: auto;
+    }
+    .device-region-form-item {
+      .ant-form-item-label {
+        width: 113px;
+        flex-basis: auto;
+      }
+    }
+  }
+}
+
+.basic-model-add-device-dialog-page();
+
+.dark-theme {
+  @import (reference) '../../../../static/themes/dark.less';
+  .basic-model-add-device-dialog-page();
+}

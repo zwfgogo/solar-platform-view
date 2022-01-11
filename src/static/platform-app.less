@@ -1,0 +1,103 @@
+@import './themes/default';
+
+
+.app-header {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-shrink: 0;
+    flex-basis: 50px;
+    z-index: 199;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+
+    .system-info {
+        display: flex;
+        align-items: center;
+
+        .user-info {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 32px;
+            margin-right: 16px;
+        }
+
+        .user-picture {
+            height: 24px;
+            width: 24px;
+            border-radius: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .user-name {
+            font-size: 14px;
+            margin-left: 8px;
+        }
+    }
+}
+
+.platform-body {
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    height: calc(100% - 60px);
+}
+
+.platform-menu {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: @app-bg;
+    overflow: hidden;
+
+    .platform-menu-body {
+        overflow: auto;
+        background-color: rgba(255, 255, 255, 0.05);
+        flex-grow: 1;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            background-color: #333645;
+        }
+    }
+
+    .platform-menu-footer {
+        height: 32px;
+        line-height: 30px;
+        color: @fontColor;
+        text-align: left;
+        background: @app-menu-footer;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+}
+
+.platform-content {
+    background: @bodyBgColor;
+    height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.system-crumbs {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+
+    .selectStation {
+        &::after {
+            display: block;
+            content: '';
+            width: 1px;
+            height: 16px;
+            background: rgba(5,10,25,0.15);
+            margin-right: 16px;
+            margin-left: 8px;
+        }
+    }
+}

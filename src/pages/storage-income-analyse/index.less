@@ -1,0 +1,140 @@
+@import (reference) '../../static/themes/default.less';
+
+.income-analyse-container-page(
+  @cardBorderColor,
+  @wanke-light-font-color,
+  @wanke-blue,
+  @wanke-primary-grey,
+  @wanke-border-light-color,
+  @wanke-border-radius,
+  @wanke-card-light-color,
+  @wanke-label-color
+) {
+  .income-analyse-container {
+    height: 100%;
+    overflow: auto;
+    .income-analyse-offset-summary {
+      width: 350px;
+      padding-right: 16px;
+      border-right: 1px solid @cardBorderColor;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .income-analyse-offset-summary-info {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -16px;
+      .offset-title {
+        font-size: 20px;
+        color: @wanke-light-font-color;
+      }
+      .offset-value {
+        font-size: 38px;
+        color: @wanke-blue;
+        font-weight: 500;
+      }
+      .offset-unit {
+        font-size: 16px;
+        color: @wanke-primary-grey;
+      }
+    }
+    .income-analyse-offset-summary-box {
+      flex-shrink: 0;
+      height: 92px;
+      border: 1px dashed @wanke-border-light-color;
+      border-radius: @wanke-border-radius;
+      margin-bottom: 8px;
+      position: relative;
+      display: flex;
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 60px;
+        border-right: 1px dashed @cardBorderColor;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .offset-summary-box-left,
+      .offset-summary-box-right {
+        flex-basis: 0%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .offset-summary-value {
+        color: @wanke-light-font-color;
+        font-size: 20px;
+        &.offset-red {
+          color: rgba(245,34,45,0.85);
+        }
+      }
+      .offset-summary-unit {
+        color: @wanke-label-color;
+        margin-left: 8px;
+      }
+      .offset-summary-label {
+        color: @wanke-label-color;
+      }
+    }
+    .income-analyse-offset-card {
+      flex-grow: 1;
+      flex-basis: 0%;
+      border-radius: @wanke-border-radius;
+      border: 1px solid @cardBorderColor;
+    }
+  }
+  
+  .income-analyse-summary {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin: 0 16px 16px 16px;
+    background-color: @wanke-card-light-color;
+    border-radius: @wanke-border-radius;
+    .income-analyse-summary-icon {
+      font-size: 48px;
+      margin-right: 16px;
+      flex-shrink: 0;
+      color: @wanke-primary-grey;
+    }
+    .income-analyse-summary-body {
+      flex-grow: 1;
+      color: @wanke-primary-grey;
+    }
+  }
+}
+
+.income-analyse-container-page(
+  @cardBorderColor,
+  @wanke-light-font-color,
+  @wanke-blue,
+  @wanke-primary-grey,
+  @wanke-border-light-color,
+  @wanke-border-radius,
+  @wanke-card-light-color,
+  @wanke-label-color
+);
+
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .income-analyse-container-page(
+    @cardBorderColor,
+    @wanke-light-font-color,
+    @wanke-blue,
+    @wanke-primary-grey,
+    @wanke-border-light-color,
+    @wanke-border-radius,
+    @wanke-card-light-color,
+    @wanke-label-color
+  );
+}

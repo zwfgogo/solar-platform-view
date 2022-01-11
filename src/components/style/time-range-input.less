@@ -1,0 +1,46 @@
+.time-range-input {
+  .range-line {
+    display: flex;
+    position: relative;
+    :global(.ant-col){
+      position: initial;
+    }
+    .picker {
+      flex-grow: 1;
+      :global(.ant-form-item-explain-error){
+        // position: absolute;
+        width: 109px;
+      }
+    }
+    .split {
+      flex-shrink: 0;
+      line-height: 32px;
+      padding: 0 8px;
+    }
+    .icon-delete {
+      position: absolute;
+      right: -14px;
+      top: 8px;
+      color: #a61d24;
+    }
+  }
+  .add-btn {
+    // border: 1px solid #313131;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+}
+
+:global(.light-theme){
+  .add-btn {
+    border: 1px solid #ddd;
+  }
+}
+
+:global(.dark-theme){
+  .add-btn {
+    border: 1px solid #313131;
+  }
+}

@@ -1,0 +1,22 @@
+@import (reference) '../../static/themes/default.less';
+
+.radio-tab-select {
+  .ant-radio-button-wrapper:first-child {
+    border-radius: @wanke-border-radius 0 0 @wanke-border-radius;
+  }
+  .ant-radio-button-wrapper:last-child {
+    border-radius: 0 @wanke-border-radius @wanke-border-radius 0;
+  }
+  .ant-radio-button-checked {
+    background-color: @menuOpenSelected;
+  }
+}
+
+.dark-theme {
+  @import (reference) '../../static/themes/dark.less';
+  .radio-tab-select {
+    .ant-radio-button-checked {
+      background-color: @menuOpenSelected;
+    }
+  }
+}
